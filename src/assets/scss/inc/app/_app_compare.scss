@@ -1,0 +1,115 @@
+.compare_products {
+    .compare-header {
+        h1 {}
+    }
+    a.trigger {
+        color: $gray;
+        position: relative;
+        height: 3.4em;
+        width: 3.4em;
+        border-radius: 100%;
+        overflow: hidden;
+        display: block;
+        i {
+            @extend .centerer;
+            font-size: 2em;
+        }
+        &:hover {
+            color: darken($gray,6%);
+        }
+        &.active {
+            background: var(--accent-1);
+            i {
+                color: $white;
+            }
+        }
+    }
+    .compare-settings {
+        max-height: 200px;
+        overflow: auto;
+        // @extend .animated;
+        // @extend .fadeIn;
+        .itm {
+            a {
+                border: 2px solid var(--accent-1);
+                padding: 0.25em 1em;
+                border-radius: 0.2em;
+                margin: 0.25em;
+                font-weight: 600;
+                color: var(--accent-1);
+                display: block;
+                &.active {
+                    border-color: var(--accent-1);
+                    background: var(--accent-1);
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .compare-products {
+        white-space: inherit;
+        margin-top: 1em;
+        overflow-y: hidden;
+        .label-col {}
+        .compare-card {
+            padding: 1em 2em;
+            @extend .bbb;
+            background: $bg-1;
+            color: $dark;
+            margin-bottom: 3em;
+            a.rmCompareItem {
+                color: var(--accent-1);
+                // text-transform: capitalize;
+                // font-weight: 500;
+                float: right;
+            }
+            .name {
+                height: 13em;
+            }
+            .card-image {
+                height: 100%;
+                text-align: center;
+                img {
+                    height: 10em;
+                    margin-top: 0.5em;
+                    width: auto;
+                    margin-bottom: 2em;
+                }
+            }
+            h3 {
+                height: 2.5em;
+                overflow: hidden;
+            }
+        }
+        .below1 h3 {
+            margin-bottom: -1em;
+        }
+        .compare-item {
+            min-width: 30%;
+            .in { height: 100%; }
+        }
+        .compare-row {
+            height: 7em;
+            position: relative;
+            // background: $light;
+            border-bottom: 2px dotted #efefef;
+            z-index: 1;
+            // padding: 2em;
+            margin-top: 1em;
+            .cin {
+                @include centerer;
+                width: 100%;
+                padding: 0 2em;
+                h4 {
+                    max-height: 2.8em;
+                    overflow: hidden;
+                }
+            }
+        }
+        @include bp(L-phone) {
+            .compare-item {
+                min-width: 100% !important;
+            }
+        }
+    }
+}

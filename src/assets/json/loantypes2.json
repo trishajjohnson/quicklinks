@@ -1,0 +1,63 @@
+[
+    {
+        "phrase": "The Place you call home",
+        "link": "/loan-type",
+        "name": "Primary Residence purchase"
+    },
+    {
+        "phrase": "A vacation and weekend home",
+        "link": "/loan-type",
+        "name": "Second Home purchase"
+    },
+    {
+        "phrase": "Build equity while generating cash flow",
+        "link": "/loan-type",
+        "name": "Fixed Rate purchase"
+    },     
+    {
+        "phrase": "A rental property purchase",
+        "link": "/loan-type",
+        "name": "Investment property purchase"
+    },
+      {
+        "phrase": "Adjustable rates that track the market",
+        "link": "/loan-type",
+        "name": "Adjustable Rate Mortgage"
+    },
+      {
+        "phrase": "Purchases in high-cost areas",
+        "link": "/loan-type",
+        "name": "jumbo Loan"
+    },
+    {
+        "phrase": "Purchases for Military Veterans or active duty",
+        "link": "/loan-type",
+        "name": "VA Loan"
+    },
+    {
+        "phrase": "A Purchases in a rural area",
+        "link": "/loan-type",
+        "name": "USDA Loan"
+    },
+          {
+        "phrase": "A low down-payment option",
+        "link": "/loan-type",
+        "name": "low down-payment purchase"
+    },
+    {
+        "phrase": "A Purchases option for lower credit scores",
+        "link": "/loan-type",
+        "name": "FHA Loan"
+    },
+    {
+        "phrase": "Purchases that require creative financial",
+        "link": "/loan-type",
+        "name": "Non-qm"
+    },
+    {
+        "phrase": "A Permanent mortgage and custom build financing",
+        "link": "/loan-type",
+        "name": "Construction Loan"
+    }
+     
+]

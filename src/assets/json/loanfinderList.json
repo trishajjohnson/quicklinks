@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Melany Bean",
+        "nmls": "#774928",
+        "img": "originator1.jpg",
+        "url": "melany.bean@domain.com",
+        "branch": {
+            "name": "Bloomington",
+            "city": "Atlanta",
+            "state": "Georgia",
+            "nmls_license": "#105965"
+        }
+    },
+    {
+        "name": "Hadley Bailey",
+        "nmls": "#105665",
+        "img": "originator2.jpg",
+        "url": "hadley.bailey@domain.com",
+        "branch": {
+            "name": "Wauwatosa",
+            "city": "Madison",
+            "state": "Wisconsin",
+            "nmls_license": "#668391"
+        }
+    },
+    {
+        "name": "Alice Esparza",
+        "nmls": "#766238",
+        "img": "originator3.jpg",
+        "url": "alice.Esparza@domain.com",
+        "branch": {
+            "name": "Coon Rapids",
+            "city": "Seattle",
+            "state": "Washington",
+            "nmls_license": "#693275"
+        }
+    },
+    {
+        "name": "Claire Dorsey",
+        "nmls": "#304109",
+        "img": "originator4.jpg",
+        "url": "claire.dorsey@domain.com",
+        "branch": {
+            "name": "Bloomington",
+            "city": "Rochester",
+            "state": "NewYork",
+            "nmls_license": "#774928"
+        }
+    },
+    {
+        "name": "Jada Santiago",
+        "nmls": "#574845",
+        "img": "originator5.jpg",
+        "url": "jada.santiago@domain.com",
+        "branch": {
+            "name": "Rousseau",
+            "city": "Laredo",
+            "state": "Texas",
+            "nmls_license": "#304109"
+        }
+    },
+    {
+        "name": "Aditya George",
+        "nmls": "#693275",
+        "img": "originator6.jpg",
+        "url": "aditya.george@domain.com",
+        "branch": {
+            "name": "Jerulle/Patel",
+            "city": "Atlanta",
+            "state": "Georgia",
+            "nmls_license": "#574845"
+        }
+    },
+    {
+        "name": "Mariana Gaines",
+        "nmls": "#774928",
+        "img": "originator7.jpg",
+        "url": "mariana.gaines@domain.com",
+        "branch": {
+            "name": "Bloomington",
+            "city": "Madison",
+            "state": "Wisconsin",
+            "nmls_license": "#094845"
+        }
+    },
+    {
+        "name": "Marlee Eaton",
+        "nmls": "#105665",
+        "img": "originator8.jpg",
+        "url": "marlee.eaton@domain.com",
+        "branch": {
+            "name": "Wauwatosa",
+            "city": "Seattle",
+            "state": "Washington",
+            "nmls_license": "#105965"
+        }
+    }
+]

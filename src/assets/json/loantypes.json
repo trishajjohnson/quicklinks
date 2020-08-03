@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Conforming Loans",        
+        "img": "loantype.png",
+        "url":"conforming-loan",
+        "tag":"purchase"
+    },
+     {
+        "name": "FHA Loans",        
+        "img": "img2.jpg",
+        "url":"fha-loans",
+        "tag":"purchase"
+    },
+    {
+        "name": "Non-Conforming Jumbo Loans",        
+        "img": "img3.jpg",
+        "url":"non-conforming-jumbo-loans",
+        "tag":"refinance"
+    },
+    {
+        "name": "203 (k) Loans",        
+        "img": "img1.jpg",
+        "url":"203-k-loans",
+        "tag":"refinance"
+    },
+        {
+        "name": "VA Loans",        
+        "img": "img2.jpg",
+        "url":"va-loans",
+        "tag":"homebuyers"
+    },
+    {   
+        "name": "USDA Loans",        
+        "img": "loantype.png",
+        "url":"usda-loans",
+        "tag":"homebuyers"
+    } 
+]

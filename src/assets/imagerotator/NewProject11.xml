@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <settings>
+    <preloader image="images/highres/FORNIDA-1-R01-C01.jpg" />
+    <userInterface showZoomButtons="true" showToolTips="true" showHotspotsButton="true" showFullScreenButton="true" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="true" showFullScreenToolbar="false" fullScreenBackColor="#FFFFFF" toolbarPosition="0" customCursorClass="default_cursor" viewerHint="" toolbarAutohide="true" />
+    <control dragSpeed="0.13" doubleClickZooms="true" disableMouseControl="false" showHighresOnFullScreen="true" mouseHoverDrag="false" hideHotspotsOnLoad="false" hideHotspotsOnZoom="true" rowSensitivity="15" dragSensitivity="10" inBrowserFullScreen="false" doubleClickFullscreen="false" zoomSteps="2" zoomSpeed="300" singleClickZooms="true" pauseOnPreload="false" resumePreloadOnHover="false" mouseWheelDrag="false" mouseWheelDragZoomOnly="false" />
+    <rotation firstImage="0" rotate="false" rotatePeriod="1" bounce="false" rotateDirection="-1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" />
+  </settings>
+  <hotspots>
+    <hotspot id="spot1" renderMode="0" indicatorImage="circ-cross-large-red.svg">
+      <spotinfo txt="Lorem Ipsum here. Nothing but filler text." css="color:#333333;width:200px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" clickAction="8" />
+    </hotspot>
+  </hotspots>
+  <images rows="1" highresWidth="2000" highresHeight="2000">
+    <image src="images/highres/FORNIDA-1-R01-C01.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C01.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C02.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C02.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C03.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C03.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C04.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C04.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C05.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C05.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C06.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C06.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C07.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C07.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C08.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C08.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C09.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C09.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C10.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C10.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C11.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C11.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C12.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C12.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C13.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C13.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C14.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C14.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C15.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C15.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C16.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C16.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C17.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C17.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C18.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C18.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C19.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C19.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C20.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C20.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C21.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C21.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C22.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C22.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C23.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C23.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C24.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C24.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C25.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C25.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C26.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C26.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C27.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C27.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C28.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C28.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C29.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C29.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C30.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C30.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C31.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C31.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C32.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C32.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C33.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C33.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C34.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C34.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C35.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C35.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R01-C36.jpg">
+      <highres src="images/highres/FORNIDA-1-R01-C36.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C01.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C01.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C02.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C02.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C03.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C03.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C04.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C04.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C05.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C05.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C06.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C06.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C07.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C07.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C08.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C08.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C09.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C09.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C10.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C10.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C11.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C11.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C12.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C12.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C13.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C13.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C14.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C14.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C15.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C15.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C16.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C16.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C17.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C17.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C18.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C18.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C19.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C19.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C20.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C20.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C21.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C21.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C22.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C22.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C23.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C23.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C24.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C24.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C25.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C25.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C26.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C26.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C27.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C27.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C28.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C28.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C29.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C29.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C30.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C30.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C31.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C31.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C32.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C32.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C33.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C33.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C34.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C34.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C35.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C35.jpg" />
+    </image>
+    <image src="images/highres/FORNIDA-1-R02-C36.jpg">
+      <highres src="images/highres/FORNIDA-1-R02-C36.jpg" />
+    </image>
+  </images>
+</config>

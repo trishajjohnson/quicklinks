@@ -1,0 +1,64 @@
+.top-grid {
+    display: grid;
+    grid-row-gap: 1em;
+    grid-column-gap: 2em;
+    grid-template-columns: min-content auto;
+
+    @include bp(L-tablet) {
+        grid-template-columns: 1fr;
+    }
+
+    > .column-estimate {
+        overflow: hidden;
+    }
+}
+
+.quote-card {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: 3fr 4fr;
+    @extend .bbb;
+    padding: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+
+    p {
+        margin: 0;
+        color: var(--foreground-2);
+    }
+
+    .left { 
+        p {
+            font-size: 0.9em;
+            line-height: 1.2em;
+        }
+
+        * {
+            text-align: right;    
+        }
+    }
+
+    .right {
+        position: relative;
+        border-left: var(--border-width) solid var(--border-color);
+        padding-left: 1em;
+
+        p {
+            font-size: 0.9em;
+            line-height: 1.2em;
+        }
+    }
+
+    &:hover { background: $bg-2; }
+
+    &.active {
+        border-right: 1px solid transparent;
+        -moz-box-shadow:    4px 0 0 0 var(--accent-1);
+        -webkit-box-shadow: 4px 0 0 0 var(--accent-1);
+        box-shadow:         4px 0 0 0 var(--accent-1);
+
+        .qid {
+            color: var(--accent-1);
+        }
+    }
+}

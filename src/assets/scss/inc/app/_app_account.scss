@@ -1,0 +1,76 @@
+$a-bg: lighten($dblue, 3%);
+$a-top: $dark;
+$a-top-dim: rgba($dark, 0.8);
+$a-top-dimmer: rgba($dark, 0.1);
+$a-table-bg: $light;
+$a-accent: $blue;
+
+ul.account-menu {
+	margin: 0 auto;
+	margin-bottom: 2em;
+	background: var(--accent-1);
+	color: var(--bg-1);
+	text-align: left;
+	overflow-x: auto;
+	white-space: nowrap;
+
+	li.item {
+		padding: 0;
+
+		a.bold_link {
+			padding: 1em 2em;
+			color: var(--bg-1);
+
+			&:hover {
+				color: var(--bg-1);
+				opacity: 0.9;
+			}
+		}
+
+		&.active a {
+			color: var(--bg-1);
+			font-weight: 600;
+			background: rgba($dark, 0.1);
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+app-profile {
+	padding-bottom: 3em;
+
+	.account-profile-page {
+		padding-bottom: 2em;
+	}
+
+	.accordion-btn {
+		// @extend .sm-btn;
+		cursor: pointer;
+		// color: var(--bg-1);
+		background: var(--foreground-1);
+		color: var(--bg-1);
+		padding: 1em;
+		text-align: left;
+		margin-bottom: 0.25em;
+		width: 100%;
+		font-weight: bold;
+	}
+
+	.accordion-content {
+		max-height: 0px;
+		overflow: hidden;
+		transition: all .5s ease-in-out;
+		
+		&.open {
+			max-height: 1000px;
+		}
+		
+		.inner {
+			padding: 1.5em;
+		}
+		
+	}
+}

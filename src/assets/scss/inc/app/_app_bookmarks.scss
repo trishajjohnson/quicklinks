@@ -1,0 +1,109 @@
+#bookmarks {
+    .bookmarks-list {
+        // padding: 0.5em 0;
+        // border-bottom: 1px solid #ccc;
+
+        .bookmark {
+            padding: 0.5em 1em !important;
+            border-right: 1px solid #ccc;
+            text-align: center;
+            // &:last-child {}
+            font-weight: 600;
+            color: #333;
+            background: var(--bg-2);
+            max-width: 20em;
+            font-size: 0.9em;
+            position: relative;
+            .fa-times {
+                font-size: 0.85em;
+                // position: absolute;
+                right: 0;
+                padding: 0 0.3em;
+                color: rgba($black, 0.2);
+                opacity: 0;
+                &:hover {
+                    color: var(--accent-1);
+                }
+            }
+            &:hover {
+                color: var(--dark);
+                background: var(--light);
+                .fa-times {
+                    opacity: 1;
+                }
+            }
+            &:active {
+                // color: var(--accent-1);
+                background: var(--light)
+            }
+            &.active {
+                background: var(--bg-1);
+                color: var(--foreground-1);
+            }
+            &.add {
+                max-width: 4em;
+            }
+            &.editmode {
+                a {
+                    cursor: text;
+                }
+            }
+        }
+    }
+    @include bp(L-tablet){
+        width: 100%;
+        padding: 0 3.5em;
+        display: inline-block;
+        vertical-align: top;
+        min-height: 34px;
+        .inside-container_ {
+            width: 100%;
+            padding: 0 3em 0 0;
+            position: relative;
+        }
+        .bookmarks-list {
+            overflow-x: auto;
+            overflow-y: hidden;
+            width: 100%;
+            display: flex;
+            .bookmark {
+                min-width: 12em;
+                max-width: 20em;
+                &.add {
+                    max-width: 4em;
+                    position: absolute;
+                    min-width: 3.5em;
+                    right: 0;
+                    top: 0;
+                    background: var(--accent-1);
+                    color: $white;
+                    &::before {
+                        top: 3px;
+                        right: 100%;
+                        margin-right: 5px;
+                        font-size: 10px;
+                        font-weight: normal;
+                        background: rgba(0,0,0,0.85);
+                    }
+                    &::after {
+                        margin-right: 0;
+                    }
+                }
+                .fa-pencil-alt, .fa-times {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+    @include bp(M-tablet){
+    padding: 0 2em;
+    }
+    @include bp(L-phone){
+    padding: 0 1.5em;
+    }
+    .editIcon { opacity: 0; }
+    &:hover {
+       .editIcon { opacity: 1; }
+    }
+
+}

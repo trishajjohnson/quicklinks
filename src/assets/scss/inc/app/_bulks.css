@@ -1,0 +1,28 @@
+#bulk {
+
+.bulk-inner {
+                .bulk-header {
+                    a {
+                        display: inline-block;
+                        padding: 0.5em;
+                        padding-left: 0 !important;
+                        color: rgba($gray, 0.7);
+                        &.active { color: $red; }
+                        &:hover { color: $gray; }
+                    }
+                }
+                .bulk-body {
+                    padding-top: 1em;
+                    .control.qty {
+                        width: 30%;
+                    }
+                    .control.partn {
+                        border-right: 1px solid darken($gray, 40%) !important;
+                    }
+                }
+            }
+            .new-trigger {
+               color: rgba($gray, 0.7);
+               &:hover { color: $red; }
+            }
+}

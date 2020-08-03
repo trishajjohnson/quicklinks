@@ -1,0 +1,26 @@
+{
+    "banner":[
+        {
+        "name":"USDA Loans",
+        "desc":"USDA Loans is a mortgage that is equal to or less than the dollar.",
+        "img":"loan-details.jpg"
+        }
+    ],
+    "list":[
+        {
+            "name":"What Is a USDA Loans?",
+            "desc":"A USDA Loans is a mortgage that is equal to or less than the dollar amount established by the conforming-loan limit set by the Federal Housing Finance Agency (FHFA) and meets the funding criteria of Freddie Mac and Fannie Mae. For borrowers with excellent credit, conforming loans are advantageous due to the low interest rates affixed to them.",
+            "img":"loan-detail11.jpg"
+        },
+        {
+            "name":"WHAT FACTORS ARE INVOLVED IN A USDA Loans?",
+            "desc":"A USDA Loans is a mortgage that is equal to or less than the dollar amount established by the conforming-loan limit set by the Federal Housing Finance Agency (FHFA) and meets the funding criteria of Freddie Mac and Fannie Mae. For borrowers with excellent credit, conforming loans are advantageous due to the low interest rates affixed to them.",
+            "img":"loantype-img2.png"
+        },
+        {
+            "name":"What Is a USDA Loans?",
+            "desc":"A USDA Loans is a mortgage that is equal to or less than the dollar amount established by the conforming-loan limit set by the Federal Housing Finance Agency (FHFA) and meets the funding criteria of Freddie Mac and Fannie Mae. For borrowers with excellent credit, conforming loans are advantageous due to the low interest rates affixed to them.",
+            "img":"loantype-img3.png"
+        }
+    ]
+}

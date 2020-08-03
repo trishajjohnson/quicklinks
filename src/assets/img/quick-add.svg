@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="197.011" height="263" viewBox="0 0 197.011 263">
+  <g id="Group_756" data-name="Group 756" transform="translate(-932 -2357.75)">
+    <path id="Path_5" data-name="Path 5" d="M151.468-147.375a11.663,11.663,0,0,1,10.746,6.141,11.422,11.422,0,0,1,0,12.281L72.152,26.609A11.663,11.663,0,0,1,61.406,32.75a11.662,11.662,0,0,1-9.723-4.605A11.917,11.917,0,0,1,49.637,17.4L73.176-81.875H12.281A11.681,11.681,0,0,1,3.07-85.969,12.45,12.45,0,0,1,0-95.691L16.375-218.5a11.455,11.455,0,0,1,4.094-7.676,12.225,12.225,0,0,1,8.187-3.07H98.25a11.443,11.443,0,0,1,9.723,4.861,11.694,11.694,0,0,1,2.047,10.49l-17.4,66.523Z" transform="translate(964.5 2587.5)" fill="#a2a2a2" stroke="#fff" stroke-width="1"/>
+    <g id="Group_755" data-name="Group 755" transform="translate(439 82)">
+      <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(493 2297)" fill="#fff" stroke="#a2a2a2" stroke-width="4">
+        <circle cx="46.5" cy="46.5" r="46.5" stroke="none"/>
+        <circle cx="46.5" cy="46.5" r="44.5" fill="none"/>
+      </g>
+      <text id="shopping-cart" transform="translate(509 2364)" fill="#a2a2a2" font-size="55" font-family="FontAwesome5FreeSolid, "Font Awesome 5 Free""><tspan x="0" y="0">shopping-cart</tspan></text>
+    </g>
+  </g>
+</svg>

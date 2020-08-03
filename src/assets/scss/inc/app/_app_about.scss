@@ -1,0 +1,147 @@
+/**about**/
+.about-top{
+    overflow: hidden;
+    &.sticky{
+        .aboutleft-img{
+            display: block;
+        }
+    }
+}
+section.about {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 6em;
+    // overflow: hidden;
+    top: 0;
+    p {
+        @extend .f;
+    }
+  .aboutleft-img {
+      height: 100%;
+      position: relative;
+      img {
+          @extend .stick-top;
+          padding-top: 0vh;
+      }
+    // display: none;
+    // width: 44%;
+    // background-position:center center;
+    // background-repeat: no-repeat;
+    // background-size: 100% auto;
+    // position: fixed;
+    // bottom: -2em;
+    // left: 0;
+    // z-index: 1;
+    // height: 100vh;
+    // min-height: 45em;
+    // overflow: hidden;
+    // top: 6%;
+    // left: 19px;
+}
+  .loantype-menuheader {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    max-height: 0;
+    @include transition(all 0.5s ease 0s);
+    overflow: hidden;
+    &.sticky{max-height: 12.5em;}
+    button {
+        background: $accent-1;
+        padding: 1.5em 1em;
+        margin: 0;
+        color: $white;
+        // font-size: 1.188em;
+        font-weight: 600;
+        cursor: pointer;
+        // @include transition(all 0.3s ease 0s);
+        &.active , &:hover{
+            background: #EFEFEF;
+            color: $accent-1;
+        }
+    }
+    }
+    .spinner-col-inner {
+        width: 100%;
+        display: inline-table;
+    }
+    .nav-bottom {
+        bottom: 0.5em;
+        button {
+            padding: 1em 1.5em;
+            border-radius: var(--main-border-radius);
+            font-weight: bold;
+            &:hover {
+                background: $foreground-1;
+            }
+        }
+    }
+
+    banner .uploadfilecontainer {
+        position: sticky;
+        top: 5em;
+    }
+}
+
+.about-right{
+    p{
+        margin: 0 0 1em;
+    }
+
+}
+// break to col block layout
+.about-blocks_ {
+    .in {
+        @extend .anti-centerer;
+    }
+    p {
+        padding-right: 0;
+    }
+    .here-img {
+        display: none;
+    }
+    .column {
+        width: 100% !important;
+        flex: none !important;
+        padding: 0;
+    }
+}
+
+// old
+.about-block {
+    height: auto;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2em 0 9em 3.125em;
+    min-height: 90vh;
+    .about-blockinner{
+        .common-btn{margin: 0 0 3em;}
+        h2{
+            margin: 0 0 0.6em;
+        }
+        p {
+            span{
+                color: $dgray;
+            }
+
+        }
+    }
+    .about-blockinner {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+}
+.about-pagebottom {
+    background: #fff;
+    position: relative;
+    z-index: 9;
+    border-top: 1px solid #707070;
+}

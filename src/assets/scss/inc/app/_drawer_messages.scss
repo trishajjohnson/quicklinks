@@ -1,0 +1,49 @@
+
+.messages-drawer-container {
+min-height: 100vh;
+overflow: auto;
+  .ahead {
+    border-bottom: 1px solid rgba(#ccc, .7);
+  }
+  .messages-item {
+    overflow: hidden;
+    font-size: 1.1em;
+    //background: #fff;
+    border-left: 3px solid var(--accent-1);
+    // no more styles here. use .inner.
+    .inner-i {
+      padding: 1em;
+      border-top: 1px solid rgba(#ccc, .5);
+      display: block;
+      border-right: 3px solid transparent;
+      font-size: 0.85em;
+
+      &:hover {
+        border-right: 3px solid var(--accent-1);
+      }
+
+      p.category {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9em;
+        color: $accent-1;
+      }
+
+      p.date {
+        // font-weight: bold;
+        font-size: 0.85em;
+        padding-top: 0.5em;
+
+        i {
+          padding-right: 1em;
+        }
+      }
+    }
+
+    &.seen {
+      //background: darken($light, 4%);
+      border-left: 0 !important;
+    }
+  }
+}

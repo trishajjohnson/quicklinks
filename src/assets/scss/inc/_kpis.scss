@@ -1,0 +1,27 @@
+.kpis {
+    a {
+        color: $blue;
+        text-decoration: underline;
+    }
+
+    // background: $light;
+    padding: 1em 0;
+    margin: 1em 0;
+    @extend .columns;
+    @extend .is-multiline;
+    @extend .is-gapless;
+
+    .kpi {
+        @extend .column;
+        @extend .is-6;
+        padding-bottom: 0.75em !important;
+
+        .key {
+            width: 100%;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .val {}
+    }
+}

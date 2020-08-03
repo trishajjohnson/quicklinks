@@ -1,0 +1,105 @@
+$aside_width: 6.25em;
+$aside_width_mobile: 5em;
+$radius: 4px;
+$field_height: 3.2em;
+$main-border: var(--border-width) solid var(--border-color);
+$headerHeight: 55px;
+
+.b0 { border: 0 !important; }
+.bbb { border: $main-border }
+.bt { border-top: $main-border }
+.br { border-right: $main-border }
+.bl { border-left: $main-border }
+.bb { border-bottom: $main-border }
+
+ul.inline {
+	list-style: none;
+	padding: 0;
+
+	li {
+		// float: left;
+		display: inline-block;
+	}
+}
+
+
+// dynamic darkmode vars (makes the css var avail as "$foreground-1"
+$accent-1: var(--accent-1);
+$accent-2: var(--accent-2);
+$bg-1: var(--bg-1);
+$bg-2: var(--bg-2);
+$bg-3: var(--bg-3);
+$bg-headers: var(--bg-headers);
+$foreground-1: var(--foreground-1);
+$foreground-2: var(--foreground-2);
+$foreground-3: var(--foreground-3);
+$foreground-headers: var(--foreground-headers);
+$headings: var(--headings);
+$border-color: var(--border-color);
+$border-width: var(--border-width);
+$lighten: var(--lighten);
+$darken: var(--darken);
+$main-border-radius: var(--main-border-radius);
+
+// (makes them avail in HTML as a class name ie: <div class="foreground-1"> will give text a red color.
+.accent-1 { color: $accent-1 !important; }
+.accent-2 { color: $accent-2 !important; }
+// .bg-accent-2 { background: $accent-2 !important; }
+// .bg-accent-1 { background: $accent-1 !important; }
+.hover-accent-1:hover { color: $accent-1 !important; }
+.bg-1 { background: $bg-1; fill: $bg-1; }
+.bg-2 { background: $bg-2; fill: $bg-2; }
+.bg-3 { background: $bg-3; fill: $bg-3; }
+.headings { background: $headings; fill: $headings; }
+.lighten { background: $lighten; fill: $lighten; }
+.darken { background: $darken; fill: $darken; }
+.foreground-1 { color: $foreground-1 !important; fill: $foreground-1;  }
+.foreground-2 { color: $foreground-2; fill: $foreground-2;  }
+.bg-foreground-1 { background: $foreground-1 !important; fill: $foreground-1;  }
+.bg-foreground-2 { background: $foreground-2; fill: $foreground-2;  }
+.foreground-3 { color: $foreground-3; fill: $foreground-3;  }
+.bg-accent-1 { background: $accent-1; fill: $accent-1;  }
+.inverted {
+	background: $foreground-1;
+	color: $bg-1;
+}
+.box-clipped {
+	border-radius: $main-border-radius;
+	overflow: hidden;
+}
+
+body,
+table,
+app-header {
+	@extend .bg-1;
+	@extend .foreground-1;
+}
+
+thead {
+	@extend .bg-2;
+	@extend .foreground-1;
+}
+
+
+.is-bordered {
+	th, td {
+		border: $main-border;
+	}
+}
+
+input.colorPicker {
+	padding: 1em;
+	width: 1.5em;
+	padding-top: 0;
+	padding-bottom: 0;
+	cursor: pointer;
+	border: $border-width solid $foreground-3;
+}
+
+.add-row {
+	td, input {
+		font-weight: bold;
+	}
+}
+
+

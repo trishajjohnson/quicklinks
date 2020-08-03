@@ -1,0 +1,141 @@
+#header {
+    height: $headerHeight;
+    .logo {
+        max-width: 132px;
+        .db {
+            // max-height: 1em;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0.3em;
+            max-height: 4em;
+            max-width: 132px;
+        }
+        img {
+            margin-bottom: -4px; // ZT only
+        }
+
+    }
+    ul.top-links {
+        height: 4em;
+        margin-top: -1px;
+        a {
+            @extend .bold_link;
+            padding-right: 1em;
+            padding: 1em;
+        }
+        li:last-child a {
+            padding-right: 0;
+        }
+    }
+    @include bp(M-tablet){
+        .logo {
+            margin-top: 0.2em;
+        }
+        .mobile-search {
+            margin-bottom: 0.4em;
+            select:focus, textarea:focus, input:focus {
+                font-size: 14px;
+            }
+        }
+
+    }
+    @include bp(L-phone){
+        height: 90px;
+        padding-bottom: 32px;
+        .logo {
+            max-width: 8em;
+            margin: 0 0 0.3em;
+        }
+            ul.top-links {
+                li{
+                    margin-right: 0.5em;
+                    &:last-child {
+                        margin-right: 0;
+                        a {
+                        padding-left: 0.5em;
+                    }
+                }
+            }            
+        }
+        .mobile-search {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0.6em;
+            margin: 0;
+            .field {
+                padding-right: 1.5em;
+                padding-left: 1.5em;
+            }
+        }
+    }
+    @include bp(S-phone){
+        padding-top: 0.5em;
+      .logo {
+            max-width: 7em;
+            margin: 0 0 1.1em;
+        }
+         ul.top-links li {    
+            font-size: 0.8em;
+        }
+    }
+
+}
+.toggle_aside {
+    position: absolute;
+    left: 0;
+    // font-size: 0.9em;
+    padding: 1.5em 0.3em;
+    top: 40vh;
+    color: $gray;
+    @extend .ease;
+    border-top-right-radius: 0.65em;
+    border-bottom-right-radius: 0.65em;
+    @extend .bt;
+    @extend .bb;
+    @extend .br;
+    z-index: 2;
+    &.true {
+        background: $gray;
+        color: #fff;
+        border: 0 !important;
+    }
+}
+
+.closePanel {
+    position: fixed;
+    top: 0;
+    left: 209px;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#fff, 0.75);
+    @include ani(0s, fadeIn, 0.5s);
+    z-index: 0;
+    cursor: pointer;
+    // @extend .disable;
+}
+
+ul.top-links {
+    margin-top: 3px;
+}
+@include bp(L-tablet){
+    body{
+        app-header {
+            position: fixed;
+            top: 0;
+            z-index: 99;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+@include bp(L-phone) {
+    body {
+        padding-top: 94px;
+    }
+}

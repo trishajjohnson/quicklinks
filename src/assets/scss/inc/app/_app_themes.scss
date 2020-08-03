@@ -1,0 +1,43 @@
+#theme-list {
+    .theme-item {
+        &.active {
+            a.radio-box {
+                border: $border-width solid $accent-1 !important;
+                i {
+                    color: $accent-1;
+                }
+            }
+        }
+        a.radio-box {
+            padding: 0.5em 0.75em;
+            border-radius: $main-border-radius;
+            border: $border-width solid transparent;
+            margin-bottom: 0.5em;
+            &:hover {
+                border: $border-width solid $border-color;
+                .remove-con {
+                    display: block;
+                }
+            }
+            .remove-con {
+                display: none;
+                color: $light;
+                &:hover {
+                    color: $accent-1;
+                }
+            }
+            .in {
+                width: 2em;
+                height: 100%;
+                i {
+                    color: $bg-2;
+                }
+            }
+            p.f {
+                padding-left: 1em;
+                color: $foreground-1;
+            }
+        }
+        
+    }
+}

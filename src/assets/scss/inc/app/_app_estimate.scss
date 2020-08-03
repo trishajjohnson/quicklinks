@@ -1,0 +1,208 @@
+
+#estimate {
+    padding: 2em;
+    padding-bottom: 3em;
+
+
+    @include bp(S-desktop) {
+        overflow-x: auto;
+    }
+
+
+    h4.r {
+        margin-top: 1em;
+        @extend .mute;
+    }
+    .estimate-header {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        align-items: start;    
+        .sentMsg {
+            padding-left: 1em;
+            font-size: 0.60em !important;
+            cursor: default;
+        }    
+        table.specs {
+            tr {
+                td:first-child {
+                    font-weight: bold;
+                    padding-right: 1em;
+                }
+                td {
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
+    .ng-value-container {
+        width: 16em;
+    }
+
+    .field {
+        padding-right: 0;
+    }
+    .admin-actions {
+        @extend .sm;
+        button {
+            @extend .pointer;
+            // background: $dark;
+            // color: $white;
+            font-size: 0.85em;
+            font-weight: bold;
+            background:$bg-2;
+            color: $foreground-1;
+            &.primary-bg {
+                color: $bg-1;
+                background: $accent-1;
+            }
+            &:active {
+                // background: darken($dark, 5%);
+                // color: #fff;
+            }
+        }
+    }
+    #estimate-activity {
+        min-width: 10em;
+    }
+    #estimate-activity,
+    .estimate-table .default {
+        th {
+            @extend .disable;
+        }
+        th, td {
+            // border: 1px solid rgba(#dbdbdb, 0);
+            // color: #fff;
+            font-size: 0.9em;
+            // @extend .is-narrow;
+            p {
+                margin: 0;
+                // color: $foreground-1;
+            }
+        }
+        tr {
+            &:hover {
+                // background: rgba(#000, 0.1);
+            }
+        }
+    }
+
+    .addresses {
+        min-width: 15em;
+        .sm-btn {
+            margin-bottom: 0.25em;
+        }
+    }
+
+    .po-from {
+        margin-top: 2em;
+    }
+
+    .estimate-table {
+        display: block;
+        margin-top: 2em;
+        table.default{
+            width: 100%;
+            input {
+                width: 100%;
+            }
+            .td-title p {
+                height: 2em;
+                overflow: hidden;
+                // &:hover {
+                //     height: 100%;
+                // }
+            }
+        }
+        table.totals {
+            display: inline-block;
+            // background: $dark;
+            td {
+                // border: 0;
+                padding: 0.25em 1.25em;
+                // border: 0;
+            }
+            tr.main {
+                font-weight: bolder;
+                font-size: 1.1em;
+            }
+        }
+        product-selector {
+            .ng-arrow-wrapper { display: none; }
+            &.editing {
+                .ng-arrow-wrapper { display: block; }
+            }
+        }
+    }
+
+    .add-new-selector {
+        .ng-select-container {
+            // background: $dark !important;
+            // color: rgb(128, 125, 125);
+        }
+    }
+    &.light-mode {
+        background: lighten($white, 4%);
+        // color: $dark;
+        @extend .bbb;
+        h4 {
+            // color: var(--accent-1);
+        }
+        input {
+            // // background: $light !important;
+        }
+        .field.has-addons {
+            // background: $light;
+            display: inline-flex;
+            padding-right: 0;
+            input {
+                // background: $light !important;
+            }
+        }
+        // .admin-actions button {
+        //     // color: $dark;
+        //     // background: $light;
+        //     &.primary-bg {
+        //         // color: #fff;
+        //     }
+        //     &:hover {
+        //         background: darken($light, 4%);
+        //     }
+        // }
+        .add-new-selector {
+            .ng-select-container {
+                // background: #fff !important;
+                // color: $dark;
+            }
+        }
+        table.specs,
+        table.totals {
+            // background: #fff !important;
+            td {
+                // background: #fff !important;
+            }
+        }
+        table {
+            // background: $bg-2;
+            // color: $foreground-1;
+            // td, th, thead {
+            //     background: $bg-2;
+            //     color: $foreground-1 !important;
+            // }
+        }
+    }
+}
+
+.viewInput {
+    height: 3.25em;
+    width: 375px;
+}
+
+.send-estimate-email {
+    min-height: 80vh;
+    .email-tabs {
+        li {
+            padding-right: 1em;
+        }
+    }
+}
+

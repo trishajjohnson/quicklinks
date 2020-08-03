@@ -1,0 +1,98 @@
+
+// checkbox
+$checkcolor: $blue;
+.checkbox-container {
+    position: relative;
+    float: left;
+    display: block;
+    position: relative;
+    cursor: pointer;
+	transition: .3s;
+	input {
+		height: 0px;
+		position: absolute;
+	}
+	label{
+    	text-align: center;
+    	border-radius: 3px;
+    	// border: 4px solid lighten($light,1%);
+    	background: $bg-2;
+    	padding: 1.2em;
+    	padding-top: 1.4em;
+		position: relative;
+	    z-index: 1;
+	    display: block;
+	    //  font-weight: bold;
+	    // height: 230px;
+	    cursor: pointer;
+	    fa.big{
+	    	// font-size: 4.5em;
+	    	color: $blue;
+	    }
+	    &:hover{
+	    	background: $bg-3;
+		}
+		.name {
+			padding-right: 2em;
+		}
+	}
+	p{
+		// //  font-weight: bold;
+		// font-size: 0.9em;
+		// margin-bottom: 1.5em;
+		// text-transform: uppercase;
+		// letter-spacing: 0.09em;
+		// color: rgba(#000,0.7);
+		// margin-top: 0.5em;
+	}
+	input{
+		opacity: 0;
+	}
+	span{
+		// -webkit-transition: all 0.2s ease;
+	 //    -moz-transition: all 0.2s ease;
+	 //    transition: all 0.2s ease;
+	 //    position: absolute;
+	 //    right: 0;
+	 //    bottom: 1rem;
+	 //    left: 0;
+	 //    margin: auto;
+	 //    display: block;
+	 //    border-radius: 50px;
+	 //    width: 30px;
+	 //    height: 30px;
+	 //    background: white;
+	 //    border: 1px solid darken($light,5%);
+	    // display: none;
+	    &:after{
+    	    -webkit-transition: all 0.2s ease;
+		    -moz-transition: all 0.2s ease;
+		    transition: all 0.2s ease;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    content: "";
+		    width: 25px;
+		    height: 25px;
+		    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/109450/checkmark.svg);
+		    background-size: 20px;
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    opacity: 0;
+	    }
+	}
+	input:checked+label {
+		// border: 3px solid $checkcolor; 
+	}
+	input:checked+span {
+	    // animation: checkbox-animation 0.7s ease-out alternate both;
+	    // &:after{
+	    // 	    animation: checkbox-symbol-animation 0.7s ease-out alternate both;
+	    // }
+	}
+}
+
+
+@-webkit-keyframes checkbox-symbol-animation{0%{opacity:0}20%{opacity:0}40%{opacity:0}60%{opacity:1}80%{opacity:1}100%{opacity:1}}
+@-webkit-keyframes checkbox-animation {0% {border-top-color: $checkcolor; border-right-color: white; border-bottom-color: white; border-left-color: white; transform: rotate(0) scale(1) } 20% {border-top-color: $checkcolor; border-right-color: white; border-bottom-color: white; border-left-color: white } 40% {border-top-color: $checkcolor; border-right-color: white; border-bottom-color: white; border-left-color: white; background: transparent; transform: rotate(360deg) scale(1) } 60% {border-top-color: $checkcolor; border-right-color: $checkcolor; border-bottom-color: $checkcolor; border-left-color: $checkcolor; background: $checkcolor; transform: rotate(360deg) scale(1.2) } 80% {border-top-color: $checkcolor; border-right-color: $checkcolor; border-bottom-color: $checkcolor; border-left-color: $checkcolor; background: $checkcolor } 100% {border-top-color: $checkcolor; border-right-color: $checkcolor; border-bottom-color: $checkcolor; border-left-color: $checkcolor; background: $checkcolor; transform: rotate(360deg) scale(1) } }
+

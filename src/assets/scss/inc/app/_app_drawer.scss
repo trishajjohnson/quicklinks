@@ -1,0 +1,99 @@
+.drawer-container {
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    .inner {
+        height: 100%;
+        background: rgba(#000,0.7);
+        @include ani(0s, fadeIn, 0.2s);
+        margin-top: 0 !important;
+    }
+    &.closing {
+        .inner { @include ani(0.3s, fadeOut, 0.2s); }
+        .drawer-content { @include ani(0s, bounceOutRight, 0.5s); }
+    }
+    // .black-overlay { }
+    .drawer-content {
+        padding-left: 0;
+        margin: 0;
+        @include ani(0s, bounceInRight, 0.5s);
+        background: $bg-1;
+        margin-right: -3em !important;
+        padding-right: 4em; //offset above
+        position: relative;
+        z-index: 2;
+        // width: 28%;
+        float: right;
+        height: 100%;
+        padding-top: 0;
+        min-width: 346px;
+
+        .close-arrow {
+            color: var(--light);
+            position: absolute;
+            top: 49vh;
+            margin-left: -1em;
+            font-size: 4em;
+            cursor: pointer;
+            
+            &:hover { color: #fff; }
+        }
+    }
+    @include bp(M-phone){
+         .drawer-content {
+            padding-right: 3em;
+        }
+    }
+}
+
+ul.drawer-list {
+    // border-left: 4px solid #ccc;
+    li {
+        a {
+            padding: 0.5em 0;
+            border-bottom: 0 !important;
+            padding-left: 1em;
+            display: block;
+            border-left: 4px solid var(--border-color);
+            &:hover, &.selected {
+                border-left: 4px solid var(--accent-1) !important;
+                // font-weight: 600;
+            }
+            &.selected {
+                // font-weight: bold;
+            }
+        }
+    }
+    &.facets_list {
+        li a:hover {
+            border-left: 4px solid #ccc;
+            font-weight: 600;
+        }
+    }
+}
+
+.drawer-list.slide {
+    position: relative;
+
+    li.line {
+      height: 33px;
+      /* overflow: hidden; */
+      position: absolute;
+      border: 2px solid #d1353c;
+      transition: all 0.3s cubic-bezier(0.68, -0.30, 0.265, 1.30);
+      top: 0px;
+    }
+
+  li.j a {
+    &.selected {
+        border-left: 4px solid #ccc;
+        // font-weight: bold;
+    }
+    &:hover {
+      border-left: 4px solid #ccc;
+    }
+  }
+}

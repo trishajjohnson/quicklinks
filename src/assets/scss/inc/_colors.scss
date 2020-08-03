@@ -1,0 +1,117 @@
+
+$dark: #222;
+$darker: #222429;
+$blue: #0087ff;
+$dblue: darken($blue,10%);
+$darker: darken($dark,5%);
+$light: #e6e6e6;
+$light1: #F7F7F7;
+$light3: #CECECE;
+$lighter: lighten(#F5F5F5,1%);
+$lime: rgba(#00ff00,0.2);
+$green: #29bd8e;
+$yellow: #eca929;
+$yellow-light:#FFB100;
+$purple: #460f54;
+$orange: #ed6c24;
+$facebook: #3B5998;
+$google: #4285f4;
+$gray: #A2A2A2;
+$dgray: #47525D;
+$red: #ff0044;
+$dred:darken($red, 8%);
+$white: #FFFFFF;
+$black: #000000;
+$facebook: #3B5998;
+$google: #4285f4;
+
+$colors:
+	"dark" $dark,
+	"gray" $gray,
+	"darker" $darker,
+	"light" $light,
+	"green" $green,
+	"lime" $lime,
+	"yellow" $yellow,
+	"red" $red,
+	"dred" $dred,
+	"white" $white,
+	"black" $black,
+	"blue" $blue,
+	"dblue" $dblue,
+	"purple" $purple,
+	"orange" $orange,
+	"facebook" $facebook,
+	"google" $google,
+	"dgray" $dgray,
+;
+
+
+@each $color in $colors{
+	// .btn-color
+	.btn-#{nth($color, 1)}{
+	    background: nth($color, 2);
+	    color: #fff;
+	}
+	// .color / color
+	.#{nth($color, 1)}, #{nth($color, 1)}{
+	    color: nth($color, 2) !important;
+	    fill: nth($color, 2) !important;
+	    a{
+	        color: nth($color, 2);
+	    }
+	}
+	// .color-bg
+	.#{nth($color, 1)}-bg {
+		background: nth($color, 2) !important;
+	}
+	
+	// .color-hover
+	.#{nth($color, 1)}-hover:hover {
+		color: nth($color, 2) !important;
+	}
+
+	// .color-g
+	.#{nth($color, 1)}-g {
+		background: rgb(30,87,153);
+		background: -moz-linear-gradient(top, nth($color, 2) 0%, adjust-hue(nth($color, 2),15%) 100%);
+		background: -webkit-linear-gradient(top, nth($color, 2) 0%, adjust-hue(nth($color, 2),15%) 100%);
+		background: linear-gradient(to bottom, nth($color, 2) 0%, adjust-hue(nth($color, 2),15%) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color', endColorstr='#7db9e8',GradientType=0 );
+	}
+}
+
+.e-mode {
+	position: absolute !important;
+	top: 1.5em;
+	left: 1.5em;
+	@extend .red-hover;
+	color: $gray;
+	cursor: pointer;
+}
+
+
+
+
+$glow_stripe_1: rgba(29,145,63,0.10) 0%;
+$glow_stripe_2: rgba(29,145,63,0.10) 20%;
+
+
+@mixin grad($deg, $c1, $c2, $fixed) {
+	background-image: -webkit-linear-gradient($deg, $c1, $c2) !important;
+	background-image: linear-gradient($deg, $c1, $c2) !important;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: $fixed;
+}
+
+
+
+
+
+
+
+
+
+
+

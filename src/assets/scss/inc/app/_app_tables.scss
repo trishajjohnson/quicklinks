@@ -1,0 +1,233 @@
+table [contenteditable="true"]:focus {
+    border: 2px solid $blue !important;
+    background: $bg-1;
+    // background: #fff;
+    &.error {
+        border: 3px solid red !important;
+    }
+}
+
+select.invisible,
+input.invisible {
+    border: 0 !important;
+    box-shadow: 0 0 0 !important;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+}
+
+th, td {
+    &.error {
+        border: 3px solid red !important;
+    }
+    &.narrow {
+        width: 1%;
+    }
+    &.icn {
+        cursor: pointer;
+        color: rgba(#000, 0.1);
+        &:hover {
+            color: rgba(#000, 0.3);
+        }
+    }
+}
+
+.no-hover:hover {
+    background: initial !important;
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: -14em;
+    > table {
+        min-width: 1200px;
+        margin-bottom: 14em;
+    }
+    > .no-data {
+        min-width: 1198px;
+        margin-left: 1px;
+    }
+}
+
+.table-light {
+    @extend .is-bordered;
+    width: 100%;
+    background: $light;
+    th,td {
+        border: 0px solid darken(#fff,2%) !important;
+    }
+    thead {
+        background: darken($light, 4%);
+        th {
+            position: relative;
+            &:after {
+                font-family: 'Font Awesome\ 5 Free';
+                content: "\f0d8";
+                position: absolute;
+                // right: 5%;
+                // top: 30%;
+                margin-left: 0.5em;
+                color: darken($light, 6%);
+                opacity: 0;
+                transition: all 0.3s cubic-bezier(0.68, -0.30, 0.265, 1.30);
+                // right: 3em;
+                // top: 20%;
+            }
+            &:hover:after {
+                color: $blue;
+                opacity: 1;
+            }
+
+            &.active:after {
+                opacity: 1;
+                color: var(--accent-1);
+            }
+
+            &.reverse:after {
+                @include rotate(180deg);
+            }
+        }
+    }
+    tr {
+        cursor: pointer;
+        &:hover {
+            background: darken($light, 2.5%);
+        }
+    }
+}
+
+.table-uniform {
+    @extend .is-bordered;
+    width: 100%;
+    //background: $light;
+    th,td {
+        border: 0px solid darken(#fff,2%) !important;
+    }
+    thead {
+        background: $bg-2;
+        th {
+            position: relative;
+            &:after {
+                font-family: 'Font Awesome\ 5 Free';
+                content: "\f0d8";
+                position: absolute;
+                // right: 5%;
+                // top: 30%;
+                margin-left: 0.5em;
+                color: darken($light, 6%);
+                opacity: 0;
+                transition: all 0.3s cubic-bezier(0.68, -0.30, 0.265, 1.30);
+                right: 3em;
+                top: 20%;
+            }
+            &:hover:after {
+                color: $blue;
+                opacity: 1;
+            }
+
+            &.active:after {
+                opacity: 1;
+                color: var(--accent-1);
+            }
+
+            &.reverse:after {
+                @include rotate(180deg);
+            }
+        }
+    }
+    tr {
+        cursor: pointer;
+        &:hover {
+            background: darken($light, 2.5%);
+        }
+    }
+}
+
+
+.jsoneditor-tree {
+    width: auto !important;
+}
+
+
+.table.is-hoverable tbody tr:not(.is-selected):hover {
+    background-color: var(--bg-3);
+}
+
+table.default { // default
+    @extend .table;
+    @extend .bbb;
+    @extend .is-bordered;
+    @extend .w100;
+    @extend .is-hoverable;
+    &.no-hover {
+        tr:hover {
+            background: inherit !important;
+        }
+    }
+    td, th {
+        vertical-align: inherit;
+    }
+    tr.active {
+        background: var(--accent-1) !important;
+        color: #fff !important;
+    }
+}
+
+table.bold_link {
+    @extend .table;
+    td {
+        padding: 0;
+        &:first-child {
+            padding-right: 3em;
+            color: var(--foreground-2);
+            &:after {
+                content: ":";
+            }
+        }
+        input {
+            padding: 0.25em;
+        }
+    }
+}
+
+.table-clean {
+    width: 100%;
+    th {
+       padding: .75em;
+    }
+    td {
+        padding: 1.5em .75em;
+        vertical-align: middle;
+        position: relative;
+        a:not(.button) {
+            color: var(--accent-1);
+            text-decoration: underline !important;
+        }
+    }
+    tr {
+        border-bottom: 3px solid var(--bg-2);
+    }
+}
+
+th {
+    a {
+        padding-right: 0.5em;
+    }
+    i {
+        transition: all 0.3s cubic-bezier(0.68, -0.30, 0.265, 1.30);
+        color: var(--accent-1);
+        &.true {
+            @include rotate(180deg);
+        }
+    }
+}
