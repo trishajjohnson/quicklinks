@@ -1354,3 +1354,37 @@ ng-select, ng-select * {
     }
 }
 
+.main-button {
+    width: 100%;
+    @extend .bbb;
+    display: block;
+    text-align: center;
+    padding: 1.25em;
+    margin-bottom: 1.25em;
+    &:hover {
+        border-color: black;
+    }
+}
+
+.right-cols {
+    .main-button {
+        margin: 0;
+    }
+}
+
+.sidebar-container {
+    h4 {
+        font-weight: lighter;
+    }
+}
+
+.sidebar-links {
+    width: 100%;
+    @extend .bbb;
+    display: block;
+}
+
+.go-button {
+    padding: 5px 8px;
+    border-radius: 2px;
+}

@@ -1,0 +1,44 @@
+.sidebar-container {
+    .column {
+        padding: 0 0 0 10px;
+    }
+    margin-bottom: 30px;
+}
+
+.sidebar {
+    width: 100%;
+    display: block;
+    margin-right: 0;
+}
+
+.sidebar-link {
+    color: rgb(79, 79, 192);
+    &:hover {
+        color: limegreen;
+        background-color: yellow;
+    }
+}
+
+// .sidebar-list {
+//     a {
+//         text-align: left;
+//     }
+// }
+
+.input-border {
+    border: none;
+    border-radius: 3px;
+}
+
+.input-button {
+    display: inline block;
+}
+
+#green-bullet {
+    color: green;
+}
+
+#red-bullet {
+    color: red;
+}
+
