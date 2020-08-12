@@ -2,9 +2,20 @@
     .main-body {
         padding: 4em;
         padding-right: 6em;
+        padding-top: 1.25em;
     }
     .main-sidebar {
         height: 100vh;
         overflow: scroll;
+        width: 200px;
+        margin-right: 0;
+        padding-right: 30px;
     }
+}
+
+.topbar-hr {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+    margin-top: 0;
 }

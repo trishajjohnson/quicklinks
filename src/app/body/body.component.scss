@@ -1,4 +1,40 @@
-.body-container {
-
+#col-l {
+    margin-top: 5px;
 }
 
+#col-r {
+    margin-top: 5px;
+}
+
+.level-center {
+    justify-content: center;
+}
+
+.level {
+    .centre {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+
+.body-right {
+    .main-button {
+        height: 70px;
+        width: 175px;
+        .level {
+            vertical-align: baseline;
+        }
+    }
+}
+
+.main-button {
+
+    .level {
+        padding: auto;
+    .centre {
+        margin: 0 auto;
+        width: 100%;
+    }
+    }
+}

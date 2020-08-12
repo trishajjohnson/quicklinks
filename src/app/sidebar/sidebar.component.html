@@ -36,34 +36,44 @@
 
     <div class="column is-12">
         
-        <div class="level-item">
-            <div class="field">
+        <label class="bot-marg" for="order-input">Go To Order</label>
+        <div class="level-item bot-marg">
+            <div class="field has-addons">
                 <div class="control">
-                    <label for="order-input">Go To Order</label>
-                    <input class="input italic" id="order-input" type="text" placeholder="Order#">
+                    <input class="input italic go-input" id="order-input" type="text" placeholder="Order#">
+                </div>
+                <div class="control">
+                    <a class="button is-info go-button">
+                        GO
+                    </a>
                 </div>
             </div>
-            <a class="button blue-bg white bold go-button">GO</a>
         </div>
     
-        <div class="level-item">
-            <div class="field">
+        <label class="bot-marg" for="product-input">Search Product</label>
+        <div class="level-item bot-marg">
+            <div class="field has-addons">
                 <div class="control">
-                    <label for="product-input">Search Product</label>
-                <input class="input italic" id="product-input" type="text" placeholder="Keyword or Sku">
+                    <input class="input italic go-input" id="product-input" type="text" placeholder="Keyword or Sku">
+                </div>
+            
+                <div class="control">
+                    <a class="button is-info go-button">GO</a>
                 </div>
             </div>
-            <a class="button blue-bg white bold go-button">GO</a>
         </div>
 
-        <div class="level-item">
-            <div class="field">
+        <label class="bot-marg" for="customer-search-input">Search Customers</label>
+        <div class="level-item bot-marg">
+            <div class="field has-addons">
                 <div class="control">
-                    <label for="customer-search-input">Search Customers</label>
-                <input class="input italic" id="customer-search-input" type="text" placeholder="Keyword/Name/Email">
+                    <input class="input italic go-input" id="customer-search-input" type="text" placeholder="Keyword/Name/Email">
+                </div>
+
+                <div class="control">
+                    <a class="button is-info go-button">GO</a>
                 </div>
             </div>
-            <a class="button blue-bg white bold go-button">GO</a>
         </div>    
     </div>
 </div>
@@ -85,7 +95,7 @@
 
 <div class="columns sidebar-container right-cols is-multiline">
     <div class="column is-12">
-        <ul class="fa-ul">
+        <ul class="fa-ul" id="sidebar-ul-left">
             <li><span class="fa-li"><i class="fas fa-circle" id="green-bullet"></i></span><a class="sidebar-link">Holiday Hours</a></li>
             <li><span class="fa-li"><i class="fas fa-circle" id="red-bullet"></i></span><a class="sidebar-link">POD Down</a></li>
         </ul>

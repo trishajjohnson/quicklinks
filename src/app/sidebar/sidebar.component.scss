@@ -14,8 +14,7 @@
 .sidebar-link {
     color: rgb(79, 79, 192);
     &:hover {
-        color: limegreen;
-        background-color: yellow;
+        color: #11118f;
     }
 }
 
@@ -30,10 +29,6 @@
     border-radius: 3px;
 }
 
-.input-button {
-    display: inline block;
-}
-
 #green-bullet {
     color: green;
 }
@@ -42,3 +37,22 @@
     color: red;
 }
 
+.button.go-button {
+    padding: 5px 8px;
+    border-radius: 2px;
+    margin-left: 0;
+    height: 25px;
+    text-transform: none;
+    font-weight: lighter;
+}
+.go-input {
+    height: 25px;
+}
+
+#sidebar-ul-left {
+    margin-left: 20px;
+}
+
+.bot-marg {
+    margin-bottom: 5px;
+}

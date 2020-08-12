@@ -1,10 +1,28 @@
-// .go-button {
-//     padding: 5px 8px;
-//     border-radius: 2px;
-// }
+go-button {
+    padding: 5px 8px;
+    border-radius: 2px;
+    margin-left: 0;
+    height: 30px;
+}
 
 .inner {
     h2 {
         font-weight: 100;
     }
+}
+
+.go-input {
+    height: 30px;
+}
+
+#repo-go-button {
+    border-radius: 2px;
+    height: 30px;
+    font-weight: lighter;
+    text-transform: none;
+}
+
+#topbar-margin-left {
+    display: flex;
+    justify-content: flex-start;
 }
