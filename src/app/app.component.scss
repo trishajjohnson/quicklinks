@@ -1,13 +1,11 @@
 .main-columns {
     .main-body {
-        padding: 4em;
-        padding-right: 6em;
-        padding-top: 1.25em;
+        padding: 2em 5em;
     }
     .main-sidebar {
         height: 100vh;
         overflow: scroll;
-        width: 200px;
+        min-width: 250px;
         margin-right: 0;
         padding-right: 30px;
     }

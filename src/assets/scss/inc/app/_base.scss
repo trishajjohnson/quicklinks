@@ -1394,3 +1394,42 @@ ng-select, ng-select * {
     border-radius: 2px;
     margin-left: 0;
 }
+
+.main-button {
+  height: 65px;
+  position: relative;
+
+  .lv {
+    padding: auto;
+    @include centerer;
+    width: 100%;
+    padding: 0 1em;
+    .centre {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+  }
+
+  .button-icon {
+    font-size: 0.75em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    i {
+        color: $light;
+    }
+    &:hover {
+        i {
+            color: $blue !important;
+        }
+    }
+  }
+}
+
+.column.is-3.sp {
+    @include bp(XL-tablet) { width: 33.33% }
+    @include bp(L-tablet) { width: 100% }
+    // @include bp(L-phone) { width: 100% }
+}

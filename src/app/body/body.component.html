@@ -1,6 +1,6 @@
 
 <div class="body-container">
-    <div class="columns bt">
+    <div class="columns bt m0">
         <div class="column body-left is-3 br p2em pl0 border-br" id="col-l">
             
             <!-- search input field -->
@@ -20,82 +20,64 @@
                 
                 <a class="main-button">
                     
-                    <div class="level">
-                        <div class="centre">Le-Vel Gear</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">Le-Vel Gear</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
 
                 </a>
 
                 <a class="main-button">
 
-                    <div class="level">
-                        <div class="centre">Shop Nerium</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">Shop Nerium</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
 
                 </a>
 
                 <a class="main-button">
 
-                    <div class="level">
-                        <div class="centre">WV Gear</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">WV Gear</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
                 
                 </a>
 
                 <a class="main-button">
 
-                    <div class="level">
-                        <div class="centre">SUCCESS Store</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">SUCCESS Store</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
 
                 </a>
 
                 <a class="main-button">
 
-                    <div class="level">
-                        <div class="centre">Pruvit Gear</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">Pruvit Gear</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
 
                 </a>
 
                 <a class="main-button">
                     
-                    <div class="level">
-                        <div class="centre">Shop My TLC</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">Shop My TLC</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
                 
                 </a>
 
                 <a class="main-button">
                     
-                    <div class="level">
-                        <div class="centre">Jim Rohn Store</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">Jim Rohn Store</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
 
                 </a>
 
                 <a class="main-button">
                     
-                    <div class="level">
-                        <div class="centre">MyTNSHOP</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">MyTNSHOP</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
                 
                 </a>
 
                 <a class="main-button">
                     
-                    <div class="level">
-                        <div class="centre">Shop Traci Lynn</div>
-                        <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                    </div>
+                    <div class="lv"> <div class="centre">Shop Traci Lynn</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
                 
                 </a>
 
@@ -114,398 +96,17 @@
             </div>
 
             <div class="columns right-cols is-multiline">
+
             
-                <!-- new button -->
-                <div class="column is-3">
-
+                <!-- Each Path -->
+                <div class="column is-3 sp" *ngFor="let path of paths">
                     <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Dashboard</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-
+                        <div class="lv"> <div class="centre">{{path.name}}</div> </div>
+                        <div class="button-icon"><i class="fas fa-bolt"></i></div>
                     </a>
-
                 </div>
 
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Orders</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Orders (Add)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Products</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Products (Add)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Products (Options)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Products (Filtering)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
                 
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Products (Brands)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Products (Reviews)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Product Categories</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Customers</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Customers (Add)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Customers (Groups)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (My Themes)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Theme Marketplace)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Logo)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Carousel)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Social)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Footer Scripts)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Web Pages)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Blog)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-                    
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Image Manager)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Storefront (Email Templates)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Marketing (Banners)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Marketing (Coupon Codes)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Marketing (Cart-Level Discounts)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Marketing (Email Marketing)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
-
-                <!-- new button -->
-                <div class="column is-3">
-
-                    <a class="main-button">
-                        
-                        <div class="level">
-                            <div class="centre">Marketing (Gift Certificates)</div>
-                            <div><i class="fas fa-bolt" style="color: grey;"></i></div>
-                        </div>
-                    
-                    </a>
-
-                </div>
             </div>
                 
         </div>
