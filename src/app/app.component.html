@@ -1,11 +1,14 @@
 <div class="columns main-columns m0">
   
   
+
+
   <!-- main columns -->
   <div class="main-body column m0">
-    <top-bar></top-bar>
+    <top-bar [pathField]="pathField"></top-bar>
     <hr class="topbar-hr">
-    <app-body></app-body>
+    <!-- <app-body (PathUpdate)="pathField = $event" [pathField]="pathField"></app-body> -->
+    <app-body (UrlUpdate)="url = $event" (PathUpdate)="path = $event" [pathField]="pathField"></app-body>
   </div>
 
 

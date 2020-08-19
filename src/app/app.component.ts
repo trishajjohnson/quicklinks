@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'quicklinks';
+  url;
+  path;
+  pathField = this.url + this.path;
 }

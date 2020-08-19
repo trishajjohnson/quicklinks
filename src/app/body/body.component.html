@@ -1,10 +1,12 @@
 
 <div class="body-container">
     <div class="columns bt m0">
-        <div class="column body-left is-3 br p2em pl0 border-br" id="col-l">
-            
-            <!-- search input field -->
+        
+        
 
+        <!-- left column -->
+        <div class="column body-left is-3 br p2em pl0 border-br" id="col-l">
+            <!-- search input field -->
             <div class="field">
                 <div class="control">
                   <input 
@@ -14,20 +16,18 @@
                 </div>
             </div>
 
-            <!-- buttons -->
-
-            <div>
-                
-                <div *ngFor="let store of stores">
-                    <a class="main-button">
-                        <div class="lv"> <div class="centre">{{store.name}}</div> </div>
-                        <div class="button-icon"><i class="fas fa-bolt"></i></div>
-                    </a>
-                </div>
-                
+            <!-- each store -->
+            <div *ngFor="let store of stores">
+                <a class="main-button" (click)="PathUpdate.emit(store.path)">
+                    <div class="lv"> <div class="centre">{{store.name}}</div> </div>
+                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
+                </a>
             </div>
         </div>
-        
+
+
+
+        <!-- right column -->
         <div class="column body-right p2em pr0 border-br" id="col-r">
             
             <div class="field">

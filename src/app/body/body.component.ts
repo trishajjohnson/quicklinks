@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -7,45 +7,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
+  @Output() PathUpdate = new EventEmitter<any>();
+  @Output() UrlUpdate = new EventEmitter<any>();
+
   stores = [
     {
-      name:'Le-Vel Gear',
-      path: "",
+      name: 'ZaynTek',
+      path: "https://store-fuymmqv4qn.mybigcommerce.com/manage/dashboard",
     },
     {
       name: 'Shop Nerium',
-      path: "",
+      path: "Shop Nerium",
     },
     {
       name: 'WV Gear',
-      path: "",
+      path: "WV Gear",
     },
     {
       name: 'SUCCESS Store',
-      path: "",
+      path: "SUCCESS Store",
     },
     {
       name: 'Pruvit Gear',
-      path: "",
+      path: "Pruvit Gear",
     },
     {
       name: 'Shop My TLC',
-      path: "",
+      path: "Shop My TLC",
     },
     {
       name: 'Jim Rohn Store',
-      path: "",
+      path: "Jim Rohn Store",
     },
     {
       name: 'MyTNSHOP',
-      path: "",
+      path: "MyTNSHOP",
     },
     {
       name: 'Shop Traci Lynn',
-      path: "",
+      path: "Shop Traci Lynn",
     }
   ];
-  
+
   paths = [
     {
       name: 'Dashboard',
@@ -163,7 +166,8 @@ export class BodyComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
+
 
 }
