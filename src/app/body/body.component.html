@@ -18,69 +18,13 @@
 
             <div>
                 
-                <a class="main-button">
-                    
-                    <div class="lv"> <div class="centre">Le-Vel Gear</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
-
-                </a>
-
-                <a class="main-button">
-
-                    <div class="lv"> <div class="centre">Shop Nerium</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
-
-                </a>
-
-                <a class="main-button">
-
-                    <div class="lv"> <div class="centre">WV Gear</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
+                <div *ngFor="let store of stores">
+                    <a class="main-button">
+                        <div class="lv"> <div class="centre">{{store.name}}</div> </div>
+                        <div class="button-icon"><i class="fas fa-bolt"></i></div>
+                    </a>
+                </div>
                 
-                </a>
-
-                <a class="main-button">
-
-                    <div class="lv"> <div class="centre">SUCCESS Store</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
-
-                </a>
-
-                <a class="main-button">
-
-                    <div class="lv"> <div class="centre">Pruvit Gear</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
-
-                </a>
-
-                <a class="main-button">
-                    
-                    <div class="lv"> <div class="centre">Shop My TLC</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
-                
-                </a>
-
-                <a class="main-button">
-                    
-                    <div class="lv"> <div class="centre">Jim Rohn Store</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
-
-                </a>
-
-                <a class="main-button">
-                    
-                    <div class="lv"> <div class="centre">MyTNSHOP</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
-                
-                </a>
-
-                <a class="main-button">
-                    
-                    <div class="lv"> <div class="centre">Shop Traci Lynn</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
-                
-                </a>
-
             </div>
         </div>
         

@@ -7,9 +7,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
+  stores = [
+    {
+      name:'Le-Vel Gear',
+      path: "",
+    },
+    {
+      name: 'Shop Nerium',
+      path: "",
+    },
+    {
+      name: 'WV Gear',
+      path: "",
+    },
+    {
+      name: 'SUCCESS Store',
+      path: "",
+    },
+    {
+      name: 'Pruvit Gear',
+      path: "",
+    },
+    {
+      name: 'Shop My TLC',
+      path: "",
+    },
+    {
+      name: 'Jim Rohn Store',
+      path: "",
+    },
+    {
+      name: 'MyTNSHOP',
+      path: "",
+    },
+    {
+      name: 'Shop Traci Lynn',
+      path: "",
+    }
+  ];
+  
   paths = [
     {
-      name: 'Dashboard**',
+      name: 'Dashboard',
       path: "",
     },
     {
