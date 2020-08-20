@@ -18,7 +18,7 @@
 
             <!-- each store -->
             <div *ngFor="let store of stores">
-                <a class="main-button" (click)="PathUpdate.emit(store.path)">
+                <a class="main-button" (click)="storeUpdate.emit(store.path); Store = store.path">
                     <div class="lv"> <div class="centre">{{store.name}}</div> </div>
                     <div class="button-icon"><i class="fas fa-bolt"></i></div>
                 </a>
@@ -28,11 +28,11 @@
 
 
         <!-- right column -->
-        <div class="column body-right p2em pr0 border-br" id="col-r">
-            
-            <div class="field">
+        <div class="column body-right p2em pr0 border-br pr" id="col-r" >
+            <p class="mono dark bold tac w100 lg" *ngIf="!Store?.length">Choose a store first.</p>
+            <div class="field" [class.disabled]="!Store?.length">
                 <div class="control">
-                    <input 
+                    <input
                         class="input pl0 italic" 
                         type="text" 
                         placeholder="Search...">
@@ -43,8 +43,8 @@
 
             
                 <!-- Each Path -->
-                <div class="column is-3 sp" *ngFor="let path of paths">
-                    <a class="main-button">
+                <div class="column is-3 sp" *ngFor="let path of paths" [class.disabled]="!Store?.length">
+                    <a class="main-button" (click)="PathUpdate.emit(path.path); Path = path.path">
                         <div class="lv"> <div class="centre">{{path.name}}</div> </div>
                         <div class="button-icon"><i class="fas fa-bolt"></i></div>
                     </a>

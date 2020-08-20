@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'quicklinks';
-  url;
-  path;
-  pathField = this.url + this.path;
+  store = "";
+  path = "";
+  pathField = this.store + this.path;
+
+  updateURL(data, what) {
+    console.log('data :', data);
+    this[what] = data; // this updates url or path
+    this.pathField = this.store + '/' + this.path;
+  }
 }

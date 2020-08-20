@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -7,8 +7,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
+  @Input() pathField;
+
   @Output() PathUpdate = new EventEmitter<any>();
-  @Output() UrlUpdate = new EventEmitter<any>();
+  @Output() storeUpdate = new EventEmitter<any>();
+
+  Store: any = "";
+  Path: any = "";
 
   stores = [
     {
@@ -52,115 +57,115 @@ export class BodyComponent implements OnInit {
   paths = [
     {
       name: 'Dashboard',
-      path: "",
+      path: "dashboard",
     },
     {
       name: 'Orders',
-      path: "",
+      path: "orders",
     },
     {
       name: 'Orders (Add)',
-      path: "",
+      path: "orders",
     },
     {
       name: 'Products',
-      path: "",
+      path: "products",
     },
     {
       name: 'Products (Add)',
-      path: "",
+      path: "products",
     },
     {
       name: 'Products (Options)',
-      path: "",
+      path: "products",
     },
     {
       name: 'Products (Filtering)',
-      path: "",
+      path: "products",
     },
     {
       name: 'Products (Brands)',
-      path: "",
+      path: "products",
     },
     {
       name: 'Products (Reviews)',
-      path: "",
+      path: "products",
     },
     {
       name: 'Product Categories',
-      path: "",
+      path: "product",
     },
     {
       name: 'Customers',
-      path: "",
+      path: "customers",
     },
     {
       name: 'Customers (Add)',
-      path: "",
+      path: "customers",
     },
     {
       name: 'Customers (Groups)',
-      path: "",
+      path: "customers",
     },
     {
       name: 'Storefront (My Themes)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Theme Marketplace)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Logo)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Carousel)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Social)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Footer Scripts)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Web Pages)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Blog)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Image Manager)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Storefront (Email Templates)',
-      path: "",
+      path: "storefront",
     },
     {
       name: 'Marketing (Banners)',
-      path: "",
+      path: "marketing",
     },
     {
       name: 'Marketing (Coupon Codes)',
-      path: "",
+      path: "marketing",
     },
     {
       name: 'Marketing (Cart-Level Discounts)',
-      path: "",
+      path: "marketing",
     },
     {
       name: 'Marketing (Email Marketing)',
-      path: "",
+      path: "marketing",
     },
     {
       name: 'Marketing (Gift Certificates)',
-      path: "",
+      path: "marketing",
     },
   ];
 

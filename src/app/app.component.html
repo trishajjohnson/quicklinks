@@ -8,7 +8,11 @@
     <top-bar [pathField]="pathField"></top-bar>
     <hr class="topbar-hr">
     <!-- <app-body (PathUpdate)="pathField = $event" [pathField]="pathField"></app-body> -->
-    <app-body (UrlUpdate)="url = $event" (PathUpdate)="path = $event" [pathField]="pathField"></app-body>
+    <app-body 
+      (storeUpdate)="updateURL($event, 'store')"
+      (PathUpdate)="updateURL($event, 'path')"
+      [pathField]="pathField"
+    ></app-body>
   </div>
 
 
