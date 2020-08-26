@@ -22,7 +22,7 @@ export class BodyComponent implements OnInit {
     },
     {
       name: 'Shop Nerium',
-      path: "Shop Nerium",
+      path: "https://www.tutorialspoint.com/nodejs/nodejs_event_emitter.htm",
     },
     {
       name: 'WV Gear',

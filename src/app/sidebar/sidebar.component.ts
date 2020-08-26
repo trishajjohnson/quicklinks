@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  orderNumber = '';
+  orderSearchPath = '';
+
+  updateOrderPath() {
+    this.orderSearchPath = "https://store-fuymmqv4qn.mybigcommerce.com/manage/orders/" + this.orderNumber;
+  }
   constructor() { }
 
   ngOnInit(): void {

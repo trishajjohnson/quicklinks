@@ -40,10 +40,10 @@
         <div class="level-item bot-marg">
             <div class="field has-addons">
                 <div class="control">
-                    <input class="input italic go-input" id="order-input" type="text" placeholder="Order#">
+                    <input class="input italic go-input" id="order-input" type="text" placeholder="Order#" [(ngModel)]="orderNumber">
                 </div>
                 <div class="control">
-                    <a class="button is-info go-button">
+                    <a href={{orderSearchPath}} class="button is-info go-button" (click)="updateOrderPath()" target="_blank">
                         GO
                     </a>
                 </div>
