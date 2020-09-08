@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { BodyComponent } from './body/body.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     BodyComponent,
-    SidebarComponent
+    SidebarComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

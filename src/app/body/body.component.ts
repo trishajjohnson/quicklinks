@@ -18,39 +18,11 @@ export class BodyComponent implements OnInit {
   stores = [
     {
       name: 'ZaynTek',
-      path: "https://store-fuymmqv4qn.mybigcommerce.com/manage/dashboard",
+      path: "https://store-fuymmqv4qn.mybigcommerce.com/manage",
     },
     {
-      name: 'Shop Nerium',
-      path: "https://www.tutorialspoint.com/nodejs/nodejs_event_emitter.htm",
-    },
-    {
-      name: 'WV Gear',
-      path: "WV Gear",
-    },
-    {
-      name: 'SUCCESS Store',
-      path: "SUCCESS Store",
-    },
-    {
-      name: 'Pruvit Gear',
-      path: "Pruvit Gear",
-    },
-    {
-      name: 'Shop My TLC',
-      path: "Shop My TLC",
-    },
-    {
-      name: 'Jim Rohn Store',
-      path: "Jim Rohn Store",
-    },
-    {
-      name: 'MyTNSHOP',
-      path: "MyTNSHOP",
-    },
-    {
-      name: 'Shop Traci Lynn',
-      path: "Shop Traci Lynn",
+      name: 'JOMA Sandbox',
+      path: "https://store-c5svnndw60.mybigcommerce.com/manage" 
     }
   ];
 
