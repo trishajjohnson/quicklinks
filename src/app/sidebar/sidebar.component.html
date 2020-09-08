@@ -5,27 +5,27 @@
     </div>
 
     <div class="column is-12">
-        <a class="sidebar-link">Partner Portal</a>
+        <a href="https://partners.bigcommerce.com/English/" class="sidebar-link" target="_blank">Partner Portal</a>
     </div>
 
     <div class="column is-12">
-        <a class="sidebar-link">DevTools</a>
+        <a href="https://devtools.bigcommerce.com/my/apps" class="sidebar-link" target="_blank">DevTools</a>
     </div>
 
     <div class="column is-12">
-        <a class="sidebar-link">Domains</a>
+        <a href="https://support.bigcommerce.com/s/article/Domain-Names" class="sidebar-link" target="_blank">Domains</a>
     </div>
 
     <div class="column is-12">
-        <a class="sidebar-link">SSL Certificates</a>
+        <a href="https://support.bigcommerce.com/s/article/BigCommerce-SSL-Certificate" class="sidebar-link" target="_blank">SSL Certificates</a>
     </div>
 
     <div class="column is-12">
-        <a class="sidebar-link">Stencil Docs</a>
+        <a href="https://developer.bigcommerce.com/stencil-docs" class="sidebar-link" target="_blank">Stencil Docs</a>
     </div>
 
     <div class="column is-12">
-        <a class="sidebar-link">API Docs</a>
+        <a href="https://developer.bigcommerce.com/api-docs" class="sidebar-link" taret="_blank">API Docs</a>
     </div>
 
 </div>
@@ -43,7 +43,7 @@
                     <input class="input italic go-input" id="order-input" type="text" placeholder="Order#" [(ngModel)]="orderNumber">
                 </div>
                 <div class="control">
-                    <a href={{orderSearchPath}} class="button is-info go-button" (click)="updateOrderPath()" target="_blank">
+                    <a href={{orderSearchPath}} class="button is-info go-button" (click)="updateOrderSearchPath()" target="_blank">
                         GO
                     </a>
                 </div>
@@ -54,11 +54,11 @@
         <div class="level-item bot-marg">
             <div class="field has-addons">
                 <div class="control">
-                    <input class="input italic go-input" id="product-input" type="text" placeholder="Keyword or Sku">
+                    <input class="input italic go-input" id="product-input" type="text" placeholder="Keyword or Sku" [(ngModel)]="productSearch">
                 </div>
             
                 <div class="control">
-                    <a class="button is-info go-button">GO</a>
+                    <a href={{productSearchPath}} class="button is-info go-button" (click)="updateProductSearchPath()" target="_blank">GO</a>
                 </div>
             </div>
         </div>
@@ -67,11 +67,11 @@
         <div class="level-item bot-marg">
             <div class="field has-addons">
                 <div class="control">
-                    <input class="input italic go-input" id="customer-search-input" type="text" placeholder="Keyword/Name/Email">
+                    <input class="input italic go-input" id="customer-search-input" type="text" placeholder="Keyword/Name/Email" [(ngModel)]="searchCustomer">
                 </div>
 
                 <div class="control">
-                    <a class="button is-info go-button">GO</a>
+                    <a href={{customerSearchPath}} class="button is-info go-button" (click)="updateCustomerSearchPath()" target="_blank">GO</a>
                 </div>
             </div>
         </div>    

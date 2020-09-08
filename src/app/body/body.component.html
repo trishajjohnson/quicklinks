@@ -12,12 +12,14 @@
                   <input 
                     class="input pl0 italic" 
                     type="text" 
-                    placeholder="Search...">
+                    placeholder="Search..."
+                    [(ngModel)]="storeQuery"
+                    name="filter">
                 </div>
             </div>
 
             <!-- each store -->
-            <div *ngFor="let store of stores">
+            <div *ngFor="let store of stores | filter:storeQuery">
                 <a class="main-button" (click)="storeUpdate.emit(store.path); Store = store.path">
                     <div class="lv"> <div class="centre">{{store.name}}</div> </div>
                     <div class="button-icon"><i class="fas fa-bolt"></i></div>
@@ -35,7 +37,9 @@
                     <input
                         class="input pl0 italic" 
                         type="text" 
-                        placeholder="Search...">
+                        placeholder="Search..."
+                        [(ngModel)]="pathQuery"
+                        name="filter">
                 </div>
             </div>
 
@@ -43,7 +47,7 @@
 
             
                 <!-- Each Path -->
-                <div class="column is-3 sp" *ngFor="let path of paths | myfilter:'accou'" [class.disabled]="!Store?.length">
+                <div class="column is-3 sp" *ngFor="let path of paths | filter:pathQuery" [class.disabled]="!Store?.length">
                     <a class="main-button" (click)="PathUpdate.emit(path.path); Path = path.path">
                         <div class="lv"> <div class="centre">{{path.name}}</div> </div>
                         <div class="button-icon"><i class="fas fa-bolt"></i></div>

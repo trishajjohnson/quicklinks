@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,11 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  @Input() pathField;
+
   orderNumber = '';
   orderSearchPath = '';
+  productQuery: any = '';
+  customerSearchPath = '';
+  searchCustomer = '';
+  productSearch = '';
+  productSearchPath = '';
 
-  updateOrderPath() {
-    this.orderSearchPath = "https://store-fuymmqv4qn.mybigcommerce.com/manage/orders/" + this.orderNumber;
+  updateOrderSearchPath() {
+    this.orderSearchPath = this.pathField + '/' + this.orderNumber;
+  }
+
+  updateProductSearchPath() {
+    this.productSearchPath = this.pathField + '?keywords=' + this.productSearch;
+  }
+  updateCustomerSearchPath() {
+
+    this.customerSearchPath = this.pathField + '?keywords=' + this.searchCustomer;
   }
   constructor() { }
 

@@ -14,7 +14,8 @@ export class BodyComponent implements OnInit {
 
   Store: any = "";
   Path: any = "";
-
+  pathQuery: any = "";
+  storeQuery: any = "";
   stores = [
     {
       name: 'ZaynTek',
@@ -37,7 +38,7 @@ export class BodyComponent implements OnInit {
     },
     {
       name: 'Orders (Add)',
-      path: "orders",
+      path: "add-order",
     },
     {
       name: 'Products',
@@ -45,27 +46,27 @@ export class BodyComponent implements OnInit {
     },
     {
       name: 'Products (Add)',
-      path: "products",
+      path: "products/add",
     },
     {
       name: 'Products (Options)',
-      path: "products",
+      path: "products/shared-product-options",
     },
     {
       name: 'Products (Filtering)',
-      path: "products",
+      path: "products/product-filtering",
     },
     {
       name: 'Products (Brands)',
-      path: "products",
+      path: "products/brands",
     },
     {
       name: 'Products (Reviews)',
-      path: "products",
+      path: "products/product-reviews",
     },
     {
       name: 'Product Categories',
-      path: "product",
+      path: "products/categories",
     },
     {
       name: 'Customers',
@@ -73,59 +74,59 @@ export class BodyComponent implements OnInit {
     },
     {
       name: 'Customers (Add)',
-      path: "customers",
+      path: "customers/add",
     },
     {
-      name: 'Customers (Groups)',
-      path: "customers",
+      name: 'Customer Groups',
+      path: "customers/groups",
     },
     {
       name: 'Storefront (My Themes)',
-      path: "storefront",
+      path: "storefront-manager/my-themes",
     },
     {
       name: 'Storefront (Theme Marketplace)',
-      path: "storefront",
+      path: "marketplace/themes",
     },
     {
       name: 'Storefront (Logo)',
-      path: "storefront",
+      path: "storefront-manager/logo",
     },
     {
       name: 'Storefront (Carousel)',
-      path: "storefront",
+      path: "storefront-manager/carousel",
     },
     {
       name: 'Storefront (Social)',
-      path: "storefront",
+      path: "storefron-manager/social",
     },
     {
       name: 'Storefront (Footer Scripts)',
-      path: "storefront",
+      path: "script-manager",
     },
     {
       name: 'Storefront (Web Pages)',
-      path: "storefront",
+      path: "content/pages",
     },
     {
       name: 'Storefront (Blog)',
-      path: "storefront",
+      path: "content/blog",
     },
     {
       name: 'Storefront (Image Manager)',
-      path: "storefront",
+      path: "content/pages/image-manager",
     },
     {
       name: 'Storefront (Email Templates)',
-      path: "storefront",
+      path: "storefront-manager/email-templates",
     },
     {
       name: 'Marketing (Banners)',
-      path: "marketing",
+      path: "marketing/banners",
     },
     {
       name: 'Marketing (Coupon Codes)',
-      path: "marketing",
+      path: "marketing/coupons",
     },
     {
       name: 'Marketing (Cart-Level Discounts)',
@@ -133,12 +134,16 @@ export class BodyComponent implements OnInit {
     },
     {
       name: 'Marketing (Email Marketing)',
-      path: "marketing",
+      path: "settings/email-marketing",
     },
     {
       name: 'Marketing (Gift Certificates)',
-      path: "marketing",
+      path: "settings/gift-certificates",
     },
+    {
+      name: 'Account Settings Users',
+      path: "settings/users"
+    }
   ];
 
   constructor() { }
