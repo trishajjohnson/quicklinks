@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   @Input() pathField;
+  @Input() Store;
 
   orderNumber = '';
   orderSearchPath = '';
@@ -16,17 +17,21 @@ export class SidebarComponent implements OnInit {
   searchCustomer = '';
   productSearch = '';
   productSearchPath = '';
+  
 
   updateOrderSearchPath() {
-    this.orderSearchPath = this.pathField + '/' + this.orderNumber;
+    this.orderSearchPath = this.Store + '/orders/' + this.orderNumber;
+    window.open(this.orderSearchPath, '_blank');
   }
 
   updateProductSearchPath() {
-    this.productSearchPath = this.pathField + '?keywords=' + this.productSearch;
+    this.productSearchPath = this.Store + '/products?keywords=' + this.productSearch;
+    window.open(this.orderSearchPath, '_blank');
   }
   updateCustomerSearchPath() {
 
-    this.customerSearchPath = this.pathField + '?keywords=' + this.searchCustomer;
+    this.customerSearchPath = this.Store + '/customers?keywords=' + this.searchCustomer;
+    window.open(this.orderSearchPath, '_blank');
   }
   constructor() { }
 

@@ -32,7 +32,7 @@
 
 
 <!-- inputs div -->
-<div class="columns sidebar-container right-cols is-multiline m0 mb1em">
+<div class="columns sidebar-container right-cols is-multiline m0 mb1em" *ngIf="Store">
 
     <div class="column is-12">
         
@@ -40,10 +40,10 @@
         <div class="level-item bot-marg">
             <div class="field has-addons">
                 <div class="control">
-                    <input class="input italic go-input" id="order-input" type="text" placeholder="Order#" [(ngModel)]="orderNumber">
+                    <input class="input italic go-input" id="order-input" type="text" placeholder="Order#" [(ngModel)]="orderNumber" (keyup.enter)="updateOrderSearchPath()">
                 </div>
                 <div class="control">
-                    <a href={{orderSearchPath}} class="button is-info go-button" (click)="updateOrderSearchPath()" target="_blank">
+                    <a class="button is-info go-button" (click)="updateOrderSearchPath()" target="_blank">
                         GO
                     </a>
                 </div>
@@ -58,7 +58,7 @@
                 </div>
             
                 <div class="control">
-                    <a href={{productSearchPath}} class="button is-info go-button" (click)="updateProductSearchPath()" target="_blank">GO</a>
+                    <a class="button is-info go-button" (click)="updateProductSearchPath()" target="_blank">GO</a>
                 </div>
             </div>
         </div>
@@ -71,14 +71,14 @@
                 </div>
 
                 <div class="control">
-                    <a href={{customerSearchPath}} class="button is-info go-button" (click)="updateCustomerSearchPath()" target="_blank">GO</a>
+                    <a class="button is-info go-button" (click)="updateCustomerSearchPath()" target="_blank">GO</a>
                 </div>
             </div>
         </div>    
     </div>
 </div>
 
-<div class="columns sidebar-container right-cols is-multiline m0 mb1em">
+<!-- <div class="columns sidebar-container right-cols is-multiline m0 mb1em">
 
     <div class="column is-12">
         <div class="level">
@@ -100,5 +100,5 @@
             <li><span class="fa-li"><i class="fas fa-circle" id="red-bullet"></i></span><a class="sidebar-link">POD Down</a></li>
         </ul>
     </div>
-</div>
+</div> -->
 

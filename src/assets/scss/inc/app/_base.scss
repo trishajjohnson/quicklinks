@@ -1364,6 +1364,9 @@ ng-select, ng-select * {
     &:hover {
         border-color: black;
     }
+    &.active {
+        border-color: $blue;
+    }
 }
 
 .right-cols {
