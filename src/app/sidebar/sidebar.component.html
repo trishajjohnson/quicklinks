@@ -32,7 +32,7 @@
 
 
 <!-- inputs div -->
-<div class="columns sidebar-container right-cols is-multiline m0 mb1em" *ngIf="Store">
+<div class="columns sidebar-container right-cols is-multiline m0 mb1em" *ngIf="state.store">
 
     <div class="column is-12">
         
@@ -54,8 +54,8 @@
         <div class="level-item bot-marg">
             <div class="field has-addons">
                 <div class="control">
-                    <input class="input italic go-input" id="product-input" type="text" placeholder="Keyword or Sku" [(ngModel)]="productSearch">
-                </div>
+                    <input class="input italic go-input" id="product-input" type="text" placeholder="Keyword or Sku" [(ngModel)]="productSearch" (keyup.enter)="updateProductSearchPath()">
+                </div> 
             
                 <div class="control">
                     <a class="button is-info go-button" (click)="updateProductSearchPath()" target="_blank">GO</a>
@@ -67,7 +67,7 @@
         <div class="level-item bot-marg">
             <div class="field has-addons">
                 <div class="control">
-                    <input class="input italic go-input" id="customer-search-input" type="text" placeholder="Keyword/Name/Email" [(ngModel)]="searchCustomer">
+                    <input class="input italic go-input" id="customer-search-input" type="text" placeholder="Keyword/Name/Email" [(ngModel)]="searchCustomer" (keyup.enter)="updateCustomerSearchPath()">
                 </div>
 
                 <div class="control">

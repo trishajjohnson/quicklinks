@@ -22,7 +22,12 @@ export class MainService {
 
   updateState(val: {}) {
     let newVal = { ...this.data, ...val };
-    newVal = { ...newVal, ...{ finalURL: `${newVal.store}/${newVal.path}`}};
+    if (newVal.store) {
+      newVal = { ...newVal, ...{ finalURL: `${newVal.store}/${newVal.path}`}};
+    }
+    else {
+      newVal = { ...newVal, ...{ finalURL: ``}};
+    }
     this.state.next(newVal);
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { MainService } from './../main.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,24 +19,31 @@ export class SidebarComponent implements OnInit {
   productSearch = '';
   productSearchPath = '';
   
+  state: any;
 
   updateOrderSearchPath() {
-    this.orderSearchPath = this.Store + '/orders/' + this.orderNumber;
+    this.orderSearchPath = this.state.store + '/orders/' + this.orderNumber;
     window.open(this.orderSearchPath, '_blank');
+    this.orderNumber = '';
   }
 
   updateProductSearchPath() {
-    this.productSearchPath = this.Store + '/products?keywords=' + this.productSearch;
-    window.open(this.orderSearchPath, '_blank');
+    this.productSearchPath = this.state.store + '/products?keywords=' + this.productSearch;
+    window.open(this.productSearchPath, '_blank');
+    this.productSearch = '';
   }
   updateCustomerSearchPath() {
 
-    this.customerSearchPath = this.Store + '/customers?keywords=' + this.searchCustomer;
-    window.open(this.orderSearchPath, '_blank');
+    this.customerSearchPath = this.state.store + '/customers?keywords=' + this.searchCustomer;
+    window.open(this.customerSearchPath, '_blank');
+    this.searchCustomer = '';
   }
-  constructor() { }
+  constructor(public mainService: MainService) {
+    this.mainService.state.subscribe(data => this.state = data);
+   }
 
   ngOnInit(): void {
+    
   }
 
 }

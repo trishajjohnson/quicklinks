@@ -20,7 +20,7 @@
 
             <!-- each store -->
             <div *ngFor="let store of stores | filter:storeQuery">
-                <a class="main-button" (click)="mainService.updateState({store: store.path})" [class.active]="Store === store.path">
+                <a class="main-button" (click)="mainService.updateState({store: store.path})" [class.active]="state.store === store.path">
                     <div class="lv"> <div class="centre">{{store.name}}</div> </div>
                     <div class="button-icon"><i class="fas fa-bolt"></i></div>
                 </a>
@@ -48,7 +48,7 @@
             
                 <!-- Each Path -->
                 <div class="column is-3 sp" *ngFor="let path of paths | filter:pathQuery">
-                    <a class="main-button" (click)="mainService.updateState({path: path.path})" [class.active]="Path === path.path">
+                    <a class="main-button" (click)="mainService.updateState({path: path.path})" [class.active]="state.path === path.path">
                         <div class="lv"> <div class="centre">{{path.name}}</div> </div>
                         <div class="button-icon"><i class="fas fa-bolt"></i></div>
                     </a>
