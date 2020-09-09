@@ -10,6 +10,9 @@ import { BodyComponent } from './body/body.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FilterPipe } from './filter.pipe';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,8 @@ import { FilterPipe } from './filter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]

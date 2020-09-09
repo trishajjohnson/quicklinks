@@ -20,7 +20,7 @@ export class MainService {
     });
   }
 
-  updateState(val: {}) {
+  updateState(val: {}, go?) {
     let newVal = { ...this.data, ...val };
     if (newVal.store) {
       newVal = { ...newVal, ...{ finalURL: `${newVal.store}/${newVal.path}`}};
@@ -29,6 +29,13 @@ export class MainService {
       newVal = { ...newVal, ...{ finalURL: ``}};
     }
     this.state.next(newVal);
+    if (go){
+      this.go();
+    }
+  }
+
+  go() {
+    window.open(this.data.finalURL, '_blank');
   }
 
 }

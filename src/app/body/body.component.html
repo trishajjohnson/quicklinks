@@ -11,7 +11,7 @@
                 <div class="control">
                   <input 
                     class="input pl0 italic" 
-                    type="text" 
+                    type="search" 
                     placeholder="Search..."
                     [(ngModel)]="storeQuery"
                     name="filter">
@@ -22,7 +22,7 @@
             <div *ngFor="let store of stores | filter:storeQuery">
                 <a class="main-button" (click)="mainService.updateState({store: store.path})" [class.active]="state.store === store.path">
                     <div class="lv"> <div class="centre">{{store.name}}</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="button-icon"><i class="fas fa-bolt" (click)="mainService.updateState({store: store.path}, true)"></i></div>
                 </a>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 <div class="control">
                     <input
                         class="input pl0 italic" 
-                        type="text" 
+                        type="search" 
                         placeholder="Search..."
                         [(ngModel)]="pathQuery"
                         name="filter">
@@ -50,7 +50,7 @@
                 <div class="column is-3 sp" *ngFor="let path of paths | filter:pathQuery">
                     <a class="main-button" (click)="mainService.updateState({path: path.path})" [class.active]="state.path === path.path">
                         <div class="lv"> <div class="centre">{{path.name}}</div> </div>
-                        <div class="button-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="button-icon"><i class="fas fa-bolt" (click)="mainService.updateState({path: path.path}, true)"></i></div>
                     </a>
                 </div>
 

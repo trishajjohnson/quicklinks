@@ -38,6 +38,7 @@ export class SidebarComponent implements OnInit {
     window.open(this.customerSearchPath, '_blank');
     this.searchCustomer = '';
   }
+  
   constructor(public mainService: MainService) {
     this.mainService.state.subscribe(data => this.state = data);
    }
