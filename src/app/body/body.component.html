@@ -20,7 +20,7 @@
 
             <!-- each store -->
             <div *ngFor="let store of stores | filter:storeQuery">
-                <a class="main-button" (click)="storeUpdate.emit(store.path); Store = store.path" [class.active]="Store === store.path">
+                <a class="main-button" (click)="mainService.updateState({store: store.path})" [class.active]="Store === store.path">
                     <div class="lv"> <div class="centre">{{store.name}}</div> </div>
                     <div class="button-icon"><i class="fas fa-bolt"></i></div>
                 </a>
@@ -30,9 +30,9 @@
 
 
         <!-- right column -->
-        <div class="column body-right p2em pr0 border-br pr" id="col-r" >
-            <p class="mono dark bold tac w100 lg" *ngIf="!Store?.length">Choose a store first.</p>
-            <div class="field" [class.disabled]="!Store?.length">
+        <div class="column body-right p2em pr0 border-br pr" id="col-r"  *ngIf="state.store">
+            <!-- <p class="mono dark bold tac w100 lg" *ngIf="!Store?.length">Choose a store first.</p> -->
+            <div class="field">
                 <div class="control">
                     <input
                         class="input pl0 italic" 
@@ -47,8 +47,8 @@
 
             
                 <!-- Each Path -->
-                <div class="column is-3 sp" *ngFor="let path of paths | filter:pathQuery" [class.disabled]="!Store?.length">
-                    <a class="main-button" (click)="PathUpdate.emit(path.path); Path = path.path" [class.active]="Path === path.path">
+                <div class="column is-3 sp" *ngFor="let path of paths | filter:pathQuery">
+                    <a class="main-button" (click)="mainService.updateState({path: path.path})" [class.active]="Path === path.path">
                         <div class="lv"> <div class="centre">{{path.name}}</div> </div>
                         <div class="button-icon"><i class="fas fa-bolt"></i></div>
                     </a>

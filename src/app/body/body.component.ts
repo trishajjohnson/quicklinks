@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { MainService } from './../main.service';
 
 @Component({
   selector: 'app-body',
@@ -145,11 +146,12 @@ export class BodyComponent implements OnInit {
       path: "settings/users"
     }
   ];
+  state: any;
 
-  constructor() { }
+  constructor(public mainService: MainService) { }
 
-  ngOnInit(): void {}
-
-
+  ngOnInit(): void {
+    this.mainService.state.subscribe(data => this.state = data);
+  }
 
 }

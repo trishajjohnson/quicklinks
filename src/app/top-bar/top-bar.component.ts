@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MainService } from './../main.service';
 
 @Component({
   selector: 'top-bar',
@@ -8,9 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TopBarComponent implements OnInit {
 
   @Input() pathField;
+  state: any;
 
-  constructor() { }
+  constructor(public mainService: MainService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.mainService.state.subscribe(data => {
+      this.state = data;
+    });
+  }
 
 }

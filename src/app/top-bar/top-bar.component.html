@@ -25,10 +25,10 @@
 
         <div class="field has-addons">
           <div class="control">
-            <input class="input go-input italic lg tar disable" id="repo-input" type="search" placeholder="path" [(ngModel)]="pathField">
+            <input class="input go-input italic lg tar disable" id="repo-input" type="search" placeholder="path" [(ngModel)]="state.finalURL">
           </div>
           <div class="control">
-            <a href={{pathField}} class="button blue-bg is-info go-button" id="repo-go-button" target="_blank"> Go! </a>
+            <a href={{state.finalURL}} class="button blue-bg is-info go-button" id="repo-go-button" target="_blank"> Go! </a>
           </div>
         </div>
           
