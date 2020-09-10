@@ -4,27 +4,58 @@
         
         
 
-        <!-- left column -->
         <div class="column body-left is-3 br p2em pl0 border-br" id="col-l">
-            <!-- search input field -->
-            <div class="field">
-                <div class="control">
-                  <input 
-                    class="input pl0 italic" 
-                    type="search" 
-                    placeholder="Search..."
-                    [(ngModel)]="storeQuery"
-                    name="filter">
+            
+            
+            <!-- left column (store list) -->
+            <ng-container *ngIf="!addStoreMode">
+                <!-- search input field -->
+                <div class="field">
+                    <div class="control">
+                      <input 
+                        class="input pl0 italic" 
+                        type="search" 
+                        placeholder="Search..."
+                        [(ngModel)]="storeQuery"
+                        name="filter">
+                    </div>
                 </div>
-            </div>
+    
+                <!-- each store -->
+                <div *ngFor="let store of stores | filter:storeQuery">
+                    <a class="main-button" (click)="mainService.updateState({store: store.path})" [class.active]="state.store === store.path">
+                        <div class="lv"> <div class="centre">{{store.name}}</div> </div>
+                        <div class="button-icon"><i class="fas fa-bolt" (click)="mainService.updateState({store: store.path}, true)"></i></div>
+                    </a>
+                </div>
 
-            <!-- each store -->
-            <div *ngFor="let store of stores | filter:storeQuery">
-                <a class="main-button" (click)="mainService.updateState({store: store.path})" [class.active]="state.store === store.path">
-                    <div class="lv"> <div class="centre">{{store.name}}</div> </div>
-                    <div class="button-icon"><i class="fas fa-bolt" (click)="mainService.updateState({store: store.path}, true)"></i></div>
-                </a>
-            </div>
+                <!-- new store trigger -->
+                <a class="bold_link" (click)="addStoreMode = true">Add New Store</a>
+            </ng-container>
+
+            <!-- add store form -->
+            <form *ngIf="addStoreMode" class="style-1">
+                <!-- name -->
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Store Name..." [(ngModel)]="newStore.name" name="name">
+                  </div>
+                </div>
+                
+                <!-- path -->
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Base Path..." [(ngModel)]="newStore.path" name="path">
+                  </div>
+                </div>
+
+                <!-- submit -->
+                <a class="button db" (click)="addStore()">Add Store</a>
+
+                <!-- close form -->
+                <a class="bold_link" (click)="addStoreMode = false">Back</a>
+            </form>
+
         </div>
 
 

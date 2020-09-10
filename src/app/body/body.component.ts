@@ -1,3 +1,5 @@
+import { toArray } from './functions';
+import { RtdbService } from './../rtdb.service';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { MainService } from './../main.service';
 
@@ -17,16 +19,18 @@ export class BodyComponent implements OnInit {
   Path: any = "";
   pathQuery: any = "";
   storeQuery: any = "";
-  stores = [
-    {
-      name: 'ZaynTek',
-      path: "https://store-fuymmqv4qn.mybigcommerce.com/manage",
-    },
-    {
-      name: 'JOMA Sandbox',
-      path: "https://store-c5svnndw60.mybigcommerce.com/manage" 
-    }
-  ];
+  addStoreMode: any;
+  newStore: any = {};
+  // stores = [
+  //   {
+  //     name: 'ZaynTek',
+  //     path: "https://store-fuymmqv4qn.mybigcommerce.com/manage",
+  //   },
+  //   {
+  //     name: 'JOMA Sandbox',
+  //     path: "https://store-c5svnndw60.mybigcommerce.com/manage" 
+  //   }
+  // ];
 
   paths = [
     {
@@ -147,11 +151,30 @@ export class BodyComponent implements OnInit {
     }
   ];
   state: any;
+  stores: any;
 
-  constructor(public mainService: MainService) { }
+  constructor(
+    public mainService: MainService,
+    public db: RtdbService,
+  ) {
+    this.getStores();
+  }
 
   ngOnInit(): void {
     this.mainService.state.subscribe(data => this.state = data);
+  }
+
+  getStores() {
+    this.db.get('stores').subscribe(data => {
+      this.stores = toArray(data);
+    });
+  }
+
+  addStore() {
+    this.db.push('stores', this.newStore).then(e => {
+      console.log(this.newStore);
+      this.addStoreMode = false;
+    });
   }
 
 }
