@@ -1431,6 +1431,22 @@ ng-select, ng-select * {
   }
 }
 
+.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.75em;
+    padding: 0.5em;
+    i {
+        color: $light;
+    }
+    &:hover {
+        i {
+            color: $blue !important;
+        }
+    }
+}
+
 .column.is-3.sp {
     @include bp(XL-tablet) { width: 33.33% }
     @include bp(L-tablet) { width: 100% }

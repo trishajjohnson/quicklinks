@@ -20,144 +20,20 @@ export class BodyComponent implements OnInit {
   pathQuery: any = "";
   storeQuery: any = "";
   addStoreMode: any;
+  addPathMode: any;
   newStore: any = {};
-  // stores = [
-  //   {
-  //     name: 'ZaynTek',
-  //     path: "https://store-fuymmqv4qn.mybigcommerce.com/manage",
-  //   },
-  //   {
-  //     name: 'JOMA Sandbox',
-  //     path: "https://store-c5svnndw60.mybigcommerce.com/manage" 
-  //   }
-  // ];
+  newPath: any = {};
 
-  paths = [
-    {
-      name: 'Dashboard',
-      path: "dashboard",
-    },
-    {
-      name: 'Orders',
-      path: "orders",
-    },
-    {
-      name: 'Orders (Add)',
-      path: "add-order",
-    },
-    {
-      name: 'Products',
-      path: "products",
-    },
-    {
-      name: 'Products (Add)',
-      path: "products/add",
-    },
-    {
-      name: 'Products (Options)',
-      path: "products/shared-product-options",
-    },
-    {
-      name: 'Products (Filtering)',
-      path: "products/product-filtering",
-    },
-    {
-      name: 'Products (Brands)',
-      path: "products/brands",
-    },
-    {
-      name: 'Products (Reviews)',
-      path: "products/product-reviews",
-    },
-    {
-      name: 'Product Categories',
-      path: "products/categories",
-    },
-    {
-      name: 'Customers',
-      path: "customers",
-    },
-    {
-      name: 'Customers (Add)',
-      path: "customers/add",
-    },
-    {
-      name: 'Customer Groups',
-      path: "customers/groups",
-    },
-    {
-      name: 'Storefront (My Themes)',
-      path: "storefront-manager/my-themes",
-    },
-    {
-      name: 'Storefront (Theme Marketplace)',
-      path: "marketplace/themes",
-    },
-    {
-      name: 'Storefront (Logo)',
-      path: "storefront-manager/logo",
-    },
-    {
-      name: 'Storefront (Carousel)',
-      path: "storefront-manager/carousel",
-    },
-    {
-      name: 'Storefront (Social)',
-      path: "storefron-manager/social",
-    },
-    {
-      name: 'Storefront (Footer Scripts)',
-      path: "script-manager",
-    },
-    {
-      name: 'Storefront (Web Pages)',
-      path: "content/pages",
-    },
-    {
-      name: 'Storefront (Blog)',
-      path: "content/blog",
-    },
-    {
-      name: 'Storefront (Image Manager)',
-      path: "content/pages/image-manager",
-    },
-    {
-      name: 'Storefront (Email Templates)',
-      path: "storefront-manager/email-templates",
-    },
-    {
-      name: 'Marketing (Banners)',
-      path: "marketing/banners",
-    },
-    {
-      name: 'Marketing (Coupon Codes)',
-      path: "marketing/coupons",
-    },
-    {
-      name: 'Marketing (Cart-Level Discounts)',
-      path: "marketing",
-    },
-    {
-      name: 'Marketing (Email Marketing)',
-      path: "settings/email-marketing",
-    },
-    {
-      name: 'Marketing (Gift Certificates)',
-      path: "settings/gift-certificates",
-    },
-    {
-      name: 'Account Settings Users',
-      path: "settings/users"
-    }
-  ];
   state: any;
   stores: any;
+  paths: any;
 
   constructor(
     public mainService: MainService,
     public db: RtdbService,
   ) {
     this.getStores();
+    this.getPaths();
   }
 
   ngOnInit(): void {
@@ -166,7 +42,14 @@ export class BodyComponent implements OnInit {
 
   getStores() {
     this.db.get('stores').subscribe(data => {
-      this.stores = toArray(data);
+      this.stores = data;
+      console.log(this.stores);
+    });
+  }
+
+  getPaths() {
+    this.db.get('paths').subscribe(data => {
+      this.paths = toArray(data);
     });
   }
 
@@ -174,7 +57,25 @@ export class BodyComponent implements OnInit {
     this.db.push('stores', this.newStore).then(e => {
       console.log(this.newStore);
       this.addStoreMode = false;
+      this.newStore = {};
     });
   }
 
+  addPath() {
+    this.db.push('paths', this.newPath).then(e => {
+      console.log(this.newPath);
+      this.addPathMode = false;
+      this.newPath = {};
+    });
+    
+  }
+
+  deleteStore(key) {
+    this.db.remove("stores", key);
+    this.mainService.updateState({store: null, path: null});
+  }
+
+  deletePath(key) {
+    this.db.remove("paths", key);
+  }
 }
