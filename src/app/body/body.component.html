@@ -24,21 +24,19 @@
                 <!-- each store -->
                 <div *ngFor="let store of stores | keyvalue | filter:storeQuery">
                     
-                    <a class="main-button" (click)="mainService.updateState({store: store.value.path})" [class.active]="state.store === store.value.path">
+                    <a class="main-button" (click)="toggleStore(store.value.path)" [class.active]="state.store === store.value.path">
                         <div class="lv"> <div class="centre">{{store.value.name}}</div> </div>
                         <div>
                             <div class="button-icon">
                                 <i class="fas fa-bolt" (click)="mainService.updateState({store: store.value.path}, true)"></i>
                             </div>
                             <div class="bottom-right">
-                                <i class="fas fa-trash" (click)="deleteStore(store.key)"></i>
+                                <i class="fas fa-trash" (click)="deleteStore(store.key); $event.stopPropagation()"></i>
                             </div>
                         </div>
-                            
-                       
-
+                  
                     </a>
-                    <a class="bold_link" (click)="deleteStore(store.key)" *ngIf="state.store === store.value.path">Delete Store</a>
+                    
                 </div>
 
                 <!-- new store trigger -->
@@ -49,14 +47,16 @@
             <form *ngIf="addStoreMode" class="style-1">
                 <!-- name -->
                 <div class="field">
-                  <div class="control">
+                    <label class="label">Name</label>
+                    <div class="control">
                     <input class="input" type="text" placeholder="Store Name..." [(ngModel)]="newStore.name" name="name">
                   </div>
                 </div>
                 
                 <!-- path -->
                 <div class="field">
-                  <div class="control">
+                    <label class="label">Path</label>
+                    <div class="control">
                     <input class="input" type="text" placeholder="Base Path..." [(ngModel)]="newStore.path" name="path">
                   </div>
                 </div>
@@ -65,7 +65,7 @@
                 <a class="button db" (click)="addStore()">Add Store</a>
 
                 <!-- close form -->
-                <a class="bold_link" (click)="addStoreMode = false">Back</a>
+                <a class="bold_link" (click)="goBack()">Back</a>
             </form>
 
         </div>
@@ -77,7 +77,7 @@
             <!-- <p class="mono dark bold tac w100 lg" *ngIf="!Store?.length">Choose a store first.</p> -->
             
             <!-- right column (path list) -->
-            <ng-container *ngIf="!addPathMode">
+            <ng-container *ngIf="!addPathMode && !editPathMode">
                 
                 <!-- search input field -->
                 <div class="field">
@@ -96,13 +96,24 @@
 
                 
                     <!-- each path -->
-                    <div class="column is-3 sp" *ngFor="let path of paths | filter:pathQuery">
-                        <a class="main-button" (click)="mainService.updateState({path: path.path})" [class.active]="state.path === path.path">
-                            <div class="lv"> <div class="centre">{{path.name}}</div> </div>
-                            <div class="button-icon"><i class="fas fa-bolt" (click)="mainService.updateState({path: path.path}, true)"></i></div>
+                    <div class="column is-3 sp" *ngFor="let path of paths | keyvalue | filter:pathQuery">
+                        
+                        <a class="main-button" (click)="mainService.updateState({path: path.value.path})" [class.active]="state.path === path.value.path">
+                            <div class="lv"> <div class="centre">{{path.value.name}}</div> </div>
+                            <div>
+                                
+                                <div class="button-icon">
+                                    <i class="fas fa-bolt" (click)="mainService.updateState({path: path.value.path}, true)"></i>
+                                </div>
+                                <div class="bottom-right">
+                                    <i class="fas fa-trash" (click)="deletePath(path.key); $event.stopPropagation()"></i>
+                                </div>
+                                <div class="top-left">
+                                    <i class="far fa-edit" (click)="toggleEdit(path)"></i>
+                                </div>
+                            </div>                        
                         </a>
-                        <a class="bold_link" (click)="deletePath(path.key)" *ngIf="state.path === path.path">Delete Path</a>
-
+                        
                     </div>
 
                     
@@ -114,27 +125,38 @@
             </ng-container>
 
             <!-- add path form -->
-            <form *ngIf="addPathMode" class="style-1">
+            <form *ngIf="addPathMode || editPathMode" class="style-1">
                 <!-- name -->
                 <div class="field">
-                  <div class="control">
+                    <label class="label">Name</label>
+                    <div class="control">
                     <input class="input" type="text" placeholder="Path Name..." [(ngModel)]="newPath.name" name="name">
                   </div>
                 </div>
                 
                 <!-- path -->
                 <div class="field">
-                  <div class="control">
+                    <label class="label">Path</label>
+                    <div class="control">
                     <input class="input" type="text" placeholder="Base Path..." [(ngModel)]="newPath.path" name="path">
                   </div>
                 </div>
 
-                <!-- submit -->
-                <a class="button db" (click)="addPath()">Add Path</a>
+                <!-- search term -->
+                <div class="field">
+                    <label class="label">Search Term</label>
+                    <div class="control">
+                    <input class="input" type="text" placeholder="Search Term..." [(ngModel)]="newPath.searchTerm" name="searchTerm">
+                  </div>
+                </div>
 
-                <!-- close form -->
-                <a class="bold_link" (click)="addPathMode = false">Back</a>
+                <!-- submit -->
+                <a class="button db" (click)="addPath()" *ngIf="addPathMode">Add Path</a>
+                <a class="button db" (click)="updatePath(editPathMode.key)" *ngIf="editPathMode">Update Path</a>
+                <a class="bold_link" (click)="addPathMode = null; editPathMode = null">Back</a>
             </form>
+                
+
         </div>
 
     </div>

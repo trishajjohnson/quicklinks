@@ -21,6 +21,7 @@ export class BodyComponent implements OnInit {
   storeQuery: any = "";
   addStoreMode: any;
   addPathMode: any;
+  editPathMode: any;
   newStore: any = {};
   newPath: any = {};
 
@@ -49,7 +50,7 @@ export class BodyComponent implements OnInit {
 
   getPaths() {
     this.db.get('paths').subscribe(data => {
-      this.paths = toArray(data);
+      this.paths = data;
     });
   }
 
@@ -66,6 +67,20 @@ export class BodyComponent implements OnInit {
       console.log(this.newPath);
       this.addPathMode = false;
       this.newPath = {};
+    }); 
+  }
+
+  toggleEdit(path) {
+    this.editPathMode = path;
+    this.newPath = path.value;
+  }
+
+  updatePath(key) {
+    this.db.update(`paths/${key}`, this.newPath).then(e => {
+      console.log(this.newPath);
+      this.addPathMode = false;
+      this.newPath = {};
+      this.editPathMode = !this.editPathMode;
     });
     
   }
@@ -73,9 +88,28 @@ export class BodyComponent implements OnInit {
   deleteStore(key) {
     this.db.remove("stores", key);
     this.mainService.updateState({store: null, path: null});
+    
   }
 
   deletePath(key) {
     this.db.remove("paths", key);
   }
+
+  goBack() {
+    this.addStoreMode = false;
+    this.newStore = {};  
+  }
+
+
+
+  toggleStore(store) {
+    if (this.state.store === store) {
+      this.mainService.updateState({store: '', path: ''});
+    }
+    else {
+      this.mainService.updateState({store: store});
+    }
+  
+}
+
 }

@@ -1363,6 +1363,24 @@ ng-select, ng-select * {
     margin-bottom: 1.25em;
     &:hover {
         border-color: black;
+        .bottom-right {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 0.75em;
+            padding: 0.5em;
+            color: $light;
+        }
+        .top-left {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0.75em;
+            padding: 0.5em;
+            color: $light;
+        }
     }
     &.active {
         border-color: $blue;
@@ -1437,9 +1455,23 @@ ng-select, ng-select * {
     right: 0;
     font-size: 0.75em;
     padding: 0.5em;
-    i {
-        color: $light;
+    display: none;
+    color: $light;
+    &:hover {
+        i {
+            color: $blue !important;
+        }
     }
+}
+
+.top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.75em;
+    padding: 0.5em;
+    display: none;
+    color: $light;
     &:hover {
         i {
             color: $blue !important;

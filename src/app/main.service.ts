@@ -29,6 +29,7 @@ export class MainService {
       newVal = { ...newVal, ...{ finalURL: ``}};
     }
     this.state.next(newVal);
+    console.log(newVal);
     if (go){
       this.go();
     }
